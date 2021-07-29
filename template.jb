@@ -1,0 +1,14 @@
+#!/bin/sh
+#$ das.py
+#$ co2
+#$ nserial 1
+#$ 06:30:00
+#$ /bin/sh
+
+echo "All output piped to file template.log"
+source /usr/local/Modules/3.2.8/init/sh
+source /opt/intel/bin/ifortvars.sh intel64
+export HOST='daint'
+module load python
+export icycle_in_job=999
+python template.py rc=template.rc -v $1 >& template.log &

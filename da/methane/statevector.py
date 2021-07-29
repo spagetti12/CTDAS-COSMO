@@ -1,0 +1,125 @@
+"""CarbonTracker Data Assimilation Shell (CTDAS) Copyright (C) 2017 Wouter Peters. 
+Users are recommended to contact the developers (wouter.peters@wur.nl) to receive
+updates of the code. See also: http://www.carbontracker.eu. 
+
+This program is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software Foundation, 
+version 3. This program is distributed in the hope that it will be useful, but 
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License along with this 
+program. If not, see <http://www.gnu.org/licenses/>."""
+#!/usr/bin/env python
+# ct_statevector_tools.py
+
+"""
+Author :  aki
+
+Revision History:
+File created on 18 Nov 2013.
+
+"""
+
+import os
+import sys
+sys.path.append(os.getcwd())
+
+import logging
+import numpy as np
+from da.baseclasses.statevector import StateVector, EnsembleMember
+
+import da.tools.io4 as io
+
+identifier = 'CarbonTracker Statevector'
+version = '0.0'
+
+################### Begin Class CO2StateVector ###################
+
+class MethaneStateVector(StateVector):
+    """ This is a StateVector object for CarbonTracker. It has a private method to make new ensemble members """
+
+    def make_species_mask(self):
+
+        self.speciesdict = {'ch4': np.ones(self.nparams)}
+        logging.debug("A species mask was created, only the following species are recognized in this system:")
+        for k in self.speciesdict.keys(): 
+            logging.debug("   ->    %s" % k)
+
+    def get_covariance(self, date, dacycle):
+        """ Make a new ensemble from specified matrices, the attribute lag refers to the position in the state vector. 
+            Note that lag=1 means an index of 0 in python, hence the notation lag-1 in the indexing below.
+            The argument is thus referring to the lagged state vector as [1,2,3,4,5,..., nlag]
+        """    
+        try:
+            import matplotlib.pyplot as plt
+        except:
+            pass
+
+        fullcov = np.zeros((self.nparams, self.nparams), float)
+
+        for i in xrange(self.nparams):
+            #fullcov[i,i] = 1.  # Identity matrix
+            fullcov[i,i] = 0.08
+        fullcov[self.nparams-1,self.nparams-1] = 1.e-10
+
+        try:
+            plt.imshow(fullcov)
+            plt.colorbar()
+            plt.savefig('fullcovariancematrix.png')
+            plt.close('all')
+            logging.debug("Covariance matrix visualized for inspection")
+        except:
+            pass
+
+        return fullcov
+
+    def read_from_legacy_file(self, filename, qual='opt'):
+        """ 
+        :param filename: the full filename for the input NetCDF file
+        :param qual: a string indicating whether to read the 'prior' or 'opt'(imized) StateVector from file
+        :rtype: None
+
+        Read the StateVector information from a NetCDF file and put in a StateVector object
+        In principle the input file will have only one four datasets inside 
+        called:
+            * `meanstate_prior`, dimensions [nlag, nparamaters]
+            * `ensemblestate_prior`, dimensions [nlag,nmembers, nparameters]
+            * `meanstate_opt`, dimensions [nlag, nparamaters]
+            * `ensemblestate_opt`, dimensions [nlag,nmembers, nparameters]
+
+        This NetCDF information can be written to file using 
+        :meth:`~da.baseclasses.statevector.StateVector.write_to_file`
+
+        """
+
+        f = io.ct_read(filename, 'read')
+
+        for n in range(self.nlag):
+            if qual == 'opt':
+                meanstate = f.get_variable('xac_%02d' % (n + 1))
+                EnsembleMembers = f.get_variable('adX_%02d' % (n + 1))
+
+            elif qual == 'prior':
+                meanstate = f.get_variable('xpc_%02d' % (n + 1))
+                EnsembleMembers = f.get_variable('pdX_%02d' % (n + 1))
+
+            if not self.ensemble_members[n] == []:
+                self.ensemble_members[n] = []
+                logging.warning('Existing ensemble for lag=%d was removed to make place for newly read data' % (n + 1))
+
+            for m in range(self.nmembers):
+                newmember = EnsembleMember(m)
+                newmember.param_values = EnsembleMembers[m, :].flatten() + meanstate  # add the mean to the deviations to hold the full parameter values
+                self.ensemble_members[n].append(newmember)
+
+
+        f.close()
+
+        logging.info('Successfully read the State Vector from file (%s) ' % filename)
+
+################### End Class MethaneStateVector ###################
+
+
+if __name__ == "__main__":
+    pass

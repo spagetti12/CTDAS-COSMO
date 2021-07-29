@@ -1,0 +1,806 @@
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : -v flag specified on command line: extra verbose output
+ [DEBUG  ] (2019-10-14 17:58:53) py-rc                   : reading rcfile config.rc ...
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : DA Cycle rc-file (config.rc) loaded successfully
+ [DEBUG  ] (2019-10-14 17:58:53) py-initexit             : DA Cycle settings have been validated succesfully
+ [DEBUG  ] (2019-10-14 17:58:53) py-rc                   : reading rcfile da/rc/carbontracker_cosmo.rc ...
+ [DEBUG  ] (2019-10-14 17:58:53) py-rc                   : Added rootdir to requested include: da/rc/NamingScheme.wp_Mar2011.rc
+ [DEBUG  ] (2019-10-14 17:58:53) py-dasystem             : DA System Info rc-file (da/rc/carbontracker_cosmo.rc) loaded successfully
+ [DEBUG  ] (2019-10-14 17:58:53) py-dasystem             : Data Assimilation System initialized: CarbonTracker CO2
+ [INFO   ] (2019-10-14 17:58:53) py-observationoperator_cosmo : Observation Operator object initialized: ObservationOperator
+ [INFO   ] (2019-10-14 17:58:53) py-obs                  : Observations object initialized: Observations baseclass
+ [INFO   ] (2019-10-14 17:58:53) py-statevector_mean     : Statevector object initialized: Baseclass Statevector 
+ [INFO   ] (2019-10-14 17:58:53) py-base_optimizer       : Optimizer object initialized: Optimizer baseclass
+ [INFO   ] (2019-10-14 17:58:53) py-cosmo                : 
+
+    ***************************************   Entering Pipeline     *************************************** 
+  
+ [INFO   ] (2019-10-14 17:58:53) py-pipeline             : 
+
+    ***************************************   Initializing current cycle    *************************************** 
+  
+ [DEBUG  ] (2019-10-14 17:58:53) py-dasystem             : DA System Info settings have been validated succesfully
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : Restarting filter from previous step
+ [DEBUG  ] (2019-10-14 17:58:53) py-general              : Using existing directory /scratch/snx3000/parsenov/real
+ [DEBUG  ] (2019-10-14 17:58:53) py-general              : Using existing directory /scratch/snx3000/parsenov/real/exec
+ [DEBUG  ] (2019-10-14 17:58:53) py-general              : Using existing directory /scratch/snx3000/parsenov/real/input
+ [DEBUG  ] (2019-10-14 17:58:53) py-general              : Using existing directory /scratch/snx3000/parsenov/real/output/20190308
+ [DEBUG  ] (2019-10-14 17:58:53) py-general              : Using existing directory /scratch/snx3000/parsenov/real/analysis
+ [DEBUG  ] (2019-10-14 17:58:53) py-general              : Using existing directory /scratch/snx3000/parsenov/real/jobs
+ [DEBUG  ] (2019-10-14 17:58:53) py-general              : Using existing directory /scratch/snx3000/parsenov/real/restart
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : Succesfully created the file structure for the assimilation job
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : Retrieved the random seed generator values of last cycle from file
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : ===============================================================
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : DA Cycle start date is 2019-03-08 00:00
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : DA Cycle end date is 2019-03-14 23:00
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : DA Cycle final date is 2019-03-14 23:00
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : DA Cycle cycle length is 7
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : DA Cycle restart is True
+ [INFO   ] (2019-10-14 17:58:53) py-initexit             : ===============================================================
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     : A TransCom  map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     : A parameter map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     : A dictionary to map grids to states and vice versa was created
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     : A matrix to map states to TransCom regions and vice versa was created
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     : A species mask was created, only the following species are recognized in this system:
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     :    ->    co2
+ [INFO   ] (2019-10-14 17:58:53) py-pipeline             : 
+
+    ***************************************   starting prepare_state    *************************************** 
+  
+ [INFO   ] (2019-10-14 17:58:53) py-statevector_mean     : Successfully read the State Vector from file (/scratch/snx3000/parsenov/real/restart/savestate_20190301.nc) 
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2019-10-14 17:58:53) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 3
+ [DEBUG  ] (2019-10-14 17:58:53) py-statevector_mean     : 21 new ensemble members were added to the state vector # 2
+ [INFO   ] (2019-10-14 17:58:53) py-statevector_mean     : The state vector has been propagated by one cycle
+ [DEBUG  ] (2019-10-14 17:58:54) py-statevector_mean     : Creating new StateVector output file (/scratch/snx3000/parsenov/real/restart/savestate_20190308.nc)
+ [INFO   ] (2019-10-14 17:58:54) py-statevector_mean     : Successfully wrote the State Vector to file (/scratch/snx3000/parsenov/real/restart/savestate_20190308.nc) 
+ [INFO   ] (2019-10-14 17:58:54) py-pipeline             : 
+
+    ***************************************   starting sample_state    *************************************** 
+  
+ [INFO   ] (2019-10-14 17:58:54) py-pipeline             : Sampling model will be run over 2 cycles
+ [INFO   ] (2019-10-14 17:58:54) py-pipeline             : 
+
+    ***************************************   .....Ensemble Kalman Filter at lag 1
+ [INFO   ] (2019-10-14 17:58:54) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-10-14 17:58:54) py-pipeline             :                   start date : 2019-03-08 00:00 
+ [INFO   ] (2019-10-14 17:58:54) py-pipeline             :                   end   date : 2019-03-14 23:00 
+ [INFO   ] (2019-10-14 17:58:54) py-pipeline             :                   file  stamp: 2019030800_2019031423 
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:56) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-10-14 17:58:57) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-10-14 17:58:57) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-10-14 17:58:57) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc)
+ [DEBUG  ] (2019-10-14 17:58:57) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-10-14 17:58:57) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc]
+ [DEBUG  ] (2019-10-14 17:58:57) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-10-14 17:58:57) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-08 00:00:00
+Process "meteo" for chain "2019030100_168_336"
+Process "icbc" for chain "2019030100_168_336"
+Process "int2lm" for chain "2019030100_168_336"
+Submitted batch job 17481706
+Process "post_int2lm" for chain "2019030100_168_336"
+Process "oae" for chain "2019030100_168_336"
+Process "octe" for chain "2019030100_168_336"
+Lambda-values for bg:
+ [0.99045044, 0.9904413, 0.9910896, 0.9920641, 0.9905263, 0.9897119, 0.99094033, 0.99063694, 0.9900083, 0.9910235, 0.98998773, 0.99039817, 0.99024427, 0.99057555, 0.99069476, 0.9908281, 0.9907236, 0.9895357, 0.9906517, 0.9905521, 0.99043316]
+Process "online_vprm" for chain "2019030100_168_336"
+Process "cosmo" for chain "2019030100_168_336"
+Submitted batch job 17482495
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-10-15 06:29:58) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-10-15 06:30:24) py-observationoperator_cosmo : Starting parallel extraction \m/
+IO Class CT_HDF not compiled, no HDF support!!!
+IO Class CT_HDF not compiled, no HDF support!!!
+[1.01348889 0.9957937  1.00545649 1.0270677  1.01140098 1.00440904
+ 1.00158159 0.99486164 0.9999842  1.00228608 0.98127087 0.97787001
+ 0.99252093 0.99303311 0.98965279 0.99330171 1.00359269 0.99371175
+ 0.97735912 1.00617802 0.9692933  0.96442556 0.97335082 0.97306665
+ 0.97945031 0.97064908 0.98481141 0.9734809  0.9788146  0.97997103
+ 0.97160852 0.9733     0.97501002 0.9766928  0.97972335 0.97592932
+ 0.97694004 0.97471895 0.98049398 0.98021034 0.99712801 0.9888521
+ 0.99560177 0.99300051 0.9979674  0.98763903 0.99138906 1.00034761
+ 1.00005245 0.99579376 0.98795786 0.98814587 0.9874932  0.98120079
+ 0.97775267 0.989601   0.99058193 0.98724455 0.98489348 0.98888769
+ 0.99240353 0.9982574  1.00103235 1.00570377 0.99461991 1.00855939
+ 1.01085838 1.00132815 0.9881739  1.01420816 0.99081594 1.00356754
+ 0.99720021 1.01577914 0.98863576 1.02071381 1.01997932 0.996586
+ 0.99252907 1.00680649 0.98477787 0.97679931 0.97829638 0.97246395
+ 0.96854979 0.99279668 0.98344012 0.98514181 0.98193703 0.98337414
+ 0.98966227 0.98537179 0.99881744 1.00592049 1.01782656 1.00662959
+ 0.9993     1.00496185 1.01716574 0.99458716 1.04293978 1.04263008
+ 1.04045649 1.03699136 1.04496785 1.05408955 1.03214852 1.04720954
+ 1.04123072 1.02178486 1.04019777 1.04023178 1.05510898 1.03612387
+ 1.05356562 1.05574691 1.03138665 1.03755116 1.05160884 1.01815399
+ 1.05024898 1.04391789 1.06486424 1.04571907 1.05665334 1.0666035
+ 1.0406419  1.04150621 1.05705035 1.0249122  1.06741007 1.06378841
+ 1.06436928 1.05564288 1.06794731 1.06785715 1.04874754 1.05999823
+ 1.0589728  1.03266946 1.06573713 1.06052609 1.06006801 1.04515338
+ 1.06436638 1.05848964 1.0441366  1.05876994 1.0548739  1.02640402
+ 1.03266116 1.03508556 1.02758439 1.02559586 1.02822681 1.0403589
+ 1.01729588 1.0342683  1.02692942 1.01268784 1.03966244 1.0318749
+ 1.02485685 1.02766621 1.03534818 1.01240659 1.01485415 1.04016987
+ 1.01425755 1.02281757 1.07713493 1.0731163  1.08257802 1.05648812
+ 1.07257318 1.07804227 1.0669289  1.07535958 1.07150988 1.05202627
+ 0.99045044]
+ [INFO   ] (2019-10-15 06:43:29) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-10-15 06:43:46) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-10-15 06:43:46) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019030800_2019031423.nc)
+ [DEBUG  ] (2019-10-15 06:43:46) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-10-15 06:43:46) py-pipeline             : statevector now carries 0 samples
+ [INFO   ] (2019-10-15 06:43:46) py-pipeline             : 
+
+    ***************************************   .....Ensemble Kalman Filter at lag 2
+ [INFO   ] (2019-10-15 06:43:46) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-10-15 06:43:46) py-pipeline             :                   start date : 2019-03-15 00:00 
+ [INFO   ] (2019-10-15 06:43:46) py-pipeline             :                   end   date : 2019-03-21 23:00 
+ [INFO   ] (2019-10-15 06:43:46) py-pipeline             :                   file  stamp: 2019031500_2019032123 
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-10-15 06:43:49) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-10-15 06:43:49) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-10-15 06:43:49) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019031500_2019032123.nc)
+ [DEBUG  ] (2019-10-15 06:43:49) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-10-15 06:43:49) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019031500_2019032123.nc]
+ [DEBUG  ] (2019-10-15 06:43:49) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019031500_2019032123.nc)
+ [INFO   ] (2019-10-15 06:43:49) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-15 00:00:00
+Process "meteo" for chain "2019030100_336_504"
+Process "icbc" for chain "2019030100_336_504"
+Process "int2lm" for chain "2019030100_336_504"
+Submitted batch job 17486663
+Process "post_int2lm" for chain "2019030100_336_504"
+Process "oae" for chain "2019030100_336_504"
+Process "octe" for chain "2019030100_336_504"
+Lambda-values for bg:
+ [0.99045044, 0.98268634, 1.0381563, 1.0323682, 0.99860775, 0.96998334, 0.9784268, 0.954826, 0.9660554, 0.92126226, 1.008574, 1.019429, 1.0253834, 0.9621674, 0.9479987, 0.97980887, 1.011319, 1.0491096, 0.8796317, 1.007595, 0.9775887]
+Process "online_vprm" for chain "2019030100_336_504"
+Process "cosmo" for chain "2019030100_336_504"
+Submitted batch job 17487015
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-10-15 20:15:03) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-10-15 20:15:29) py-observationoperator_cosmo : Starting parallel extraction \m/
+ [INFO   ] (2019-10-15 20:28:38) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-10-15 20:28:56) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019031500_2019032123.nc)
+ [INFO   ] (2019-10-15 20:28:56) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019031500_2019032123.nc)
+ [DEBUG  ] (2019-10-15 20:28:56) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-10-15 20:28:56) py-pipeline             : Added samples from the observation operator to the assimilated obs list in the statevector
+ [DEBUG  ] (2019-10-15 20:28:56) py-pipeline             : statevector now carries 154 samples
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             : 
+
+    ***************************************   starting invert    *************************************** 
+  
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             : There was no minimum least squares algorithm specified in the DA System rc file (key : opt.algorithm)
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             : ...using serial algorithm as default...
+ [INFO   ] (2019-10-15 20:28:56) py-optimizer            : Current minimum least squares algorithm is set to Serial
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Creating new diagnostics file for optimizer (/scratch/snx3000/parsenov/real/output/20190308/optimizer.20190308.nc)
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Diagnostics file closed
+ [INFO   ] (2019-10-15 20:28:56) py-optimizer            : Current localization option is set to None
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : BIAS observations - model = 1.204133
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1410
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ALBS, 1410
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 1410
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1411
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ALBS, 1411
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 1411
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1412
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ALBS, 1412
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 1412
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1413
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ALBS, 1413
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 1413
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1414
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ALBS, 1414
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 1414
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ALBS,1415) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1416
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ALBS, 1416
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 1416
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3921
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation BNTG, 3921
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 3921
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3922
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation BNTG, 3922
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 3922
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3923
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation BNTG, 3923
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 3923
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3924
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation BNTG, 3924
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 3924
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3925
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation BNTG, 3925
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 3925
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3926
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation BNTG, 3926
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 3926
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3927
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation BNTG, 3927
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 3927
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BRM, 4665
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation BRM, 4665
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BRM, 4666
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation BRM, 4666
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (BRM,4667) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BRM, 4668
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation BRM, 4668
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BRM, 4669
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation BRM, 4669
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BRM, 4670
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation BRM, 4670
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation BRM, 4671
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation BRM, 4671
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7269
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation CHRI, 7269
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 7269
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7270
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation CHRI, 7270
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 7270
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7271
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation CHRI, 7271
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 7271
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7272
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation CHRI, 7272
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 7272
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7273
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation CHRI, 7273
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 7273
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7274
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation CHRI, 7274
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 7274
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7275
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation CHRI, 7275
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 7275
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation DUE1, 12291
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation DUE1, 12291
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation DUE1, 12292
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation DUE1, 12292
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (DUE1,12293) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation DUE1, 12294
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation DUE1, 12294
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation DUE1, 12295
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation DUE1, 12295
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (DUE1,12296) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (DUE1,12297) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13779
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ESMO, 13779
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 13779
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13780
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ESMO, 13780
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 13780
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13781
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ESMO, 13781
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 13781
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13782
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ESMO, 13782
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 13782
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13783
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ESMO, 13783
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 13783
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ESMO,13784) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13785
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ESMO, 13785
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 13785
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation FROB, 14988
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation FROB, 14988
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 14988
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation FROB, 14989
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation FROB, 14989
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 14989
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation FROB, 14990
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation FROB, 14990
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 14990
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation FROB, 14991
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation FROB, 14991
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 14991
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation FROB, 14992
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation FROB, 14992
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 14992
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation FROB, 14993
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation FROB, 14993
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 14993
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation FROB, 14994
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation FROB, 14994
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 14994
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15732
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation GIMM, 15732
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15733
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation GIMM, 15733
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15734
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation GIMM, 15734
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15735
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation GIMM, 15735
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15736
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation GIMM, 15736
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15737
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation GIMM, 15737
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15738
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation GIMM, 15738
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation HAE, 18150
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation HAE, 18150
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation HAE, 18151
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation HAE, 18151
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (HAE,18152) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation HAE, 18153
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation HAE, 18153
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation HAE, 18154
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation HAE, 18154
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (HAE,18155) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation HAE, 18156
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation HAE, 18156
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21870
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation LAEG, 21870
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21871
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation LAEG, 21871
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21872
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation LAEG, 21872
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21873
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation LAEG, 21873
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21874
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation LAEG, 21874
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21875
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation LAEG, 21875
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21876
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation LAEG, 21876
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23730
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation MAGN, 23730
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 23730
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23731
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation MAGN, 23731
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 23731
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23732
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation MAGN, 23732
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 23732
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (MAGN,23733) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23734
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation MAGN, 23734
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 23734
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23735
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation MAGN, 23735
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 23735
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23736
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation MAGN, 23736
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 23736
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28845
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation PAYN, 28845
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28846
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation PAYN, 28846
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (PAYN,28847) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28848
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation PAYN, 28848
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28849
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation PAYN, 28849
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28850
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation PAYN, 28850
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28851
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation PAYN, 28851
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RECK, 30426
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation RECK, 30426
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 30426
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RECK, 30427
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation RECK, 30427
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 30427
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RECK, 30428
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation RECK, 30428
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 30428
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RECK, 30429
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation RECK, 30429
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 30429
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RECK, 30430
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation RECK, 30430
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 30430
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RECK, 30431
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation RECK, 30431
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 30431
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RECK, 30432
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation RECK, 30432
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 30432
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RIG, 30984
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation RIG, 30984
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RIG, 30985
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation RIG, 30985
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (RIG,30986) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RIG, 30987
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation RIG, 30987
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RIG, 30988
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation RIG, 30988
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RIG, 30989
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation RIG, 30989
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation RIG, 30990
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Not allowed to localize observation RIG, 30990
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32100
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SAVE, 32100
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32100
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32101
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SAVE, 32101
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32101
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32102
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SAVE, 32102
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32102
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32103
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SAVE, 32103
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32103
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32104
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SAVE, 32104
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32104
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32105
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SAVE, 32105
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32105
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32106
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SAVE, 32106
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32106
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32658
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SEMP, 32658
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32658
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32659
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SEMP, 32659
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32659
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SEMP,32660) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32661
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SEMP, 32661
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32661
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32662
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SEMP, 32662
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32662
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32663
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SEMP, 32663
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32663
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32664
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation SEMP, 32664
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 32664
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SOTT,34518) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SOTT,34519) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SOTT,34520) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SOTT,34521) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SOTT,34522) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SOTT,34523) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SOTT,34524) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SSAL,34704) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SSAL,34705) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SSAL,34706) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SSAL,34707) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SSAL,34708) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SSAL,34709) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (SSAL,34710) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35355
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation TAEN, 35355
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 35355
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35356
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation TAEN, 35356
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 35356
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35357
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation TAEN, 35357
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 35357
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35358
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation TAEN, 35358
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 35358
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35359
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation TAEN, 35359
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 35359
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35360
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation TAEN, 35360
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 35360
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35361
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation TAEN, 35361
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 35361
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40191
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZHBR, 40191
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 40191
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40192
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZHBR, 40192
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 40192
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40193
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZHBR, 40193
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 40193
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40194
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZHBR, 40194
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 40194
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40195
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZHBR, 40195
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 40195
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ZHBR,40196) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40197
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZHBR, 40197
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 40197
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44097
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZSCH, 44097
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44097
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ZSCH,44098) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44099
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZSCH, 44099
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44099
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ZSCH,44100) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44101
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZSCH, 44101
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44101
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ZSCH,44102) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ZSCH,44103) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44748
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZUE, 44748
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44748
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44749
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZUE, 44749
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44749
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44750
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZUE, 44750
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44750
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44751
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZUE, 44751
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44751
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44752
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZUE, 44752
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44752
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Skipping observation (ZUE,44753) because of flag value 2
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44754
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Trying to localize observation ZUE, 44754
+ [DEBUG  ] (2019-10-15 20:28:56) py-optimizer            : Not localized observation 44754
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Returning optimized data to the StateVector, setting "StateVector.isOptimized = True" 
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Opening existing diagnostics file for optimizer (/scratch/snx3000/parsenov/real/output/20190308/optimizer.20190308.nc)
+ [DEBUG  ] (2019-10-15 20:28:56) py-base_optimizer       : Diagnostics file closed
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             : 
+
+    ***************************************   starting advance    *************************************** 
+  
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             : Sampling model will be run over 1 cycle
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             :                   start date : 2019-03-08 00:00 
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             :                   end   date : 2019-03-14 23:00 
+ [INFO   ] (2019-10-15 20:28:56) py-pipeline             :                   file  stamp: 2019030800_2019031423 
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-10-15 20:28:59) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-10-15 20:28:59) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-10-15 20:28:59) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc)
+ [DEBUG  ] (2019-10-15 20:28:59) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-10-15 20:28:59) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc]
+ [DEBUG  ] (2019-10-15 20:28:59) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-10-15 20:28:59) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-08 00:00:00
+Process "meteo" for chain "2019030100_168_336"
+Process "icbc" for chain "2019030100_168_336"
+Process "int2lm" for chain "2019030100_168_336"
+Submitted batch job 17498266
+Process "post_int2lm" for chain "2019030100_168_336"
+Process "oae" for chain "2019030100_168_336"
+Process "octe" for chain "2019030100_168_336"
+Lambda-values for bg:
+ [0.99054796, 0.99052453, 0.9912288, 0.9921776, 0.9906031, 0.9897634, 0.99102527, 0.99070084, 0.9900859, 0.9910535, 0.9901369, 0.9905278, 0.99042064, 0.9906406, 0.99073577, 0.9908999, 0.9908317, 0.9897607, 0.99065906, 0.9905942, 0.9904959]
+Process "online_vprm" for chain "2019030100_168_336"
+Process "cosmo" for chain "2019030100_168_336"
+Submitted batch job 17499107
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-10-16 18:10:37) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-10-16 18:11:04) py-observationoperator_cosmo : Starting parallel extraction \m/
+chi2 0.038392092301132795
+chi2 1.0464996682402399
+chi2 1.568117858389044
+chi2 3.189359055514649e-06
+chi2 0.30103988806480314
+chi2 3.489057708821565
+chi2 0.569125288656462
+chi2 0.0384754318043444
+chi2 1.4277949792031508
+chi2 7.14747692423825e-05
+chi2 0.6010805446808876
+chi2 0.11486406721857656
+chi2 1.2018781259836073
+chi2 0.015438627779507625
+chi2 3.41669738932428
+chi2 0.24474142278147026
+chi2 0.8511010746198974
+chi2 0.9762820453943053
+chi2 3.794381490701687
+chi2 0.02705395579155916
+chi2 0.23188439270442796
+chi2 0.11787374091232809
+chi2 0.003591593871282711
+chi2 0.5856738219544523
+chi2 0.6729147544376021
+chi2 0.42737835825220194
+chi2 0.16329229985793414
+chi2 4.770054928876632
+chi2 6.8914254448307855
+chi2 0.5958486322066398
+chi2 0.36516347160350016
+chi2 1.4473023833422511
+chi2 0.7903279847020446
+chi2 1.3859507827630557
+chi2 0.13694919040788273
+chi2 5.987996492701731
+chi2 0.09961812574517102
+chi2 0.6387139610394302
+chi2 0.13374200268971684
+chi2 0.3495221136466637
+chi2 0.2506641351237089
+chi2 0.2892901128547747
+chi2 0.14135742320141967
+chi2 0.24336935898576692
+chi2 1.589147560907484
+chi2 1.9903817557621328
+chi2 0.22284279915523153
+chi2 1.128674068531576
+chi2 8.673011449513767
+chi2 0.40855597557424034
+chi2 1.2100533537043612
+chi2 6.100038908253747
+chi2 2.6090601845950783
+chi2 3.5732918610593947
+chi2 3.7227983027469986
+chi2 0.14830345515127683
+chi2 4.912340639823696
+chi2 1.410869169504455
+chi2 7.13144601273575
+chi2 1.045976760852991
+chi2 0.15320339198005656
+chi2 6.1289318797834715
+chi2 0.0015678525542197935
+chi2 0.17654627983261093
+chi2 3.9904296078349124
+chi2 0.33824647097748234
+chi2 0.06023409133092328
+chi2 0.082544534203926
+chi2 0.16175932661540182
+chi2 1.1486742382058528
+chi2 1.987940214904589
+chi2 2.3816052719579246
+chi2 1.5748366947331183
+chi2 1.3662383180844921
+chi2 0.5029971303939157
+chi2 0.5701367303776896
+chi2 1.8409961608158554
+chi2 0.7163119040650663
+chi2 0.401884628158861
+chi2 11.852314671987061
+chi2 2.231331443512535
+chi2 0.222591467842693
+chi2 8.060273720046337e-05
+chi2 1.71105193164808
+chi2 1.5118356751833417
+chi2 3.6758832268687627
+chi2 0.8424390521496303
+chi2 0.07397071322982733
+chi2 4.918250250398934
+chi2 1.9852818909053171
+chi2 3.279918961604748
+chi2 0.00420963169556287
+chi2 0.22301782412871418
+chi2 0.6720849189432249
+chi2 2.379996715887523
+chi2 0.15248390245492846
+chi2 1.2178811455487504
+chi2 3.5258350602537156
+chi2 0.005794622836589419
+chi2 0.3227180470828743
+chi2 0.2321437311101384
+chi2 1.4877290167305093
+chi2 1.1457042118798075
+chi2 0.17684295018377053
+chi2 0.014853992918071419
+chi2 5.307623477883359
+chi2 4.9412044056131625
+chi2 4.117336173853197e-05
+chi2 1.727142813998772
+chi2 1.0961525483313383
+chi2 2.9322490431928077
+chi2 0.010072876819376693
+chi2 0.0014560009703811386
+chi2 8.945943208377878
+chi2 0.855515415203306
+chi2 5.123297795898622
+chi2 0.0019043941374848553
+chi2 2.0906871905865088
+chi2 0.6585911644556922
+chi2 10.948700177710625
+chi2 0.02397713424234987
+chi2 1.7204924710076575
+ [INFO   ] (2019-10-16 18:29:23) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-10-16 18:29:40) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-10-16 18:29:40) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190308/samples_simulated.2019030800_2019031423.nc)
+ [DEBUG  ] (2019-10-16 18:29:40) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-10-16 18:29:40) py-pipeline             : Appended ObsOperator restart and output file lists to dacycle for collection 
+ [DEBUG  ] (2019-10-16 18:29:40) py-pipeline             : Appended Observation filename to dacycle for collection: /scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc
+ [DEBUG  ] (2019-10-16 18:29:40) py-observations_cosmo   : Creating new auxiliary sample output file for postprocessing (/scratch/snx3000/parsenov/real/output/20190308/sample_auxiliary_2019030800_2019031423.nc)
+ [DEBUG  ] (2019-10-16 18:29:40) py-observations_cosmo   : Successfully wrote data to auxiliary sample output file (/scratch/snx3000/parsenov/real/output/20190308/sample_auxiliary_2019030800_2019031423.nc)
+ [INFO   ] (2019-10-16 18:29:40) py-pipeline             : 
+
+    ***************************************   starting save_and_submit    *************************************** 
+  
+ [DEBUG  ] (2019-10-16 18:29:40) py-statevector_mean     : Opening existing StateVector output file (/scratch/snx3000/parsenov/real/restart/savestate_20190308.nc)
+ [INFO   ] (2019-10-16 18:29:40) py-statevector_mean     : Successfully wrote the State Vector to file (/scratch/snx3000/parsenov/real/restart/savestate_20190308.nc) 
+ [INFO   ] (2019-10-16 18:29:40) py-initexit             : Saved the random seed generator values to file
+ [DEBUG  ] (2019-10-16 18:29:40) py-initexit             : Wrote new da_runtime.rc (/scratch/snx3000/parsenov/real/restart/da_runtime_20190315.rc) to restart dir
+ [INFO   ] (2019-10-16 18:29:40) py-initexit             : Collecting the required restart data
+ [DEBUG  ] (2019-10-16 18:29:40) py-initexit             :            to   directory: /scratch/snx3000/parsenov/real/restart 
+ [DEBUG  ] (2019-10-16 18:29:40) py-general              : Using existing directory /scratch/snx3000/parsenov/real/output/20190308
+ [INFO   ] (2019-10-16 18:29:40) py-initexit             : Collecting the required output data
+ [DEBUG  ] (2019-10-16 18:29:40) py-initexit             :            to   directory: /scratch/snx3000/parsenov/real/output/20190308 
+ [DEBUG  ] (2019-10-16 18:29:40) py-initexit             :            [copy] .... /scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc 
+ [DEBUG  ] (2019-10-16 18:29:40) py-initexit             :            [copy] .... /scratch/snx3000/parsenov/real/restart/savestate_20190308.nc 
+ [INFO   ] (2019-10-16 18:29:40) py-initexit             : Final date reached, no new cycle started
+ [INFO   ] (2019-10-16 18:29:40) py-pipeline             : Cycle finished...exiting pipeline
+ [INFO   ] (2019-10-16 18:29:40) py-cosmo                : 
+
+    ***************************************   All done. God bless    *************************************** 
+  

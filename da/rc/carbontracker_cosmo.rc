@@ -1,0 +1,58 @@
+! CarbonTracker Data Assimilation Shell (CTDAS) Copyright (C) 2017 Wouter Peters. 
+! Users are recommended to contact the developers (wouter.peters@wur.nl) to receive
+! updates of the code. See also: http://www.carbontracker.eu. 
+!
+! This program is free software: you can redistribute it and/or modify it under the
+! terms of the GNU General Public License as published by the Free Software Foundation, 
+! version 3. This program is distributed in the hope that it will be useful, but 
+! WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+! FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+!
+! You should have received a copy of the GNU General Public License along with this 
+! program. If not, see <http://www.gnu.org/licenses/>. 
+
+!!! Info for the CarbonTracker data assimilation system
+
+datadir         : /store/empa/em05/parsenov/ch_obs
+
+! For ObsPack
+obspack.input.id   : obs
+!obspack.input.id   : obspack
+obspack.input.dir  : ${datadir}
+!/obspack !/${obspack.input.id}
+obs.sites.rc       : ${obspack.input.dir}/sites_weights_ctdas.rc
+!obs.sites.rc       : ${obspack.input.dir}/summary/sites_weights_ctdas.rc
+
+! Using a second ObsPack (from 1 January 2016)
+!obspack.input.id2  : obspack_co2_1_NRT_v3.0_2016-06-06
+!obspack.input.dir2 : ${datadir}/obspacks/${obspack.input.id2}
+!obs.sites.rc2      : ${obspack.input.dir2}/summary/sites_weights_Dec2016.rc
+
+!ocn.covariance  : ${datadir}/oceans/oif/cov_ocean.2000.01.nc 
+!deltaco2.prefix : oif_p3_era40.dpco2
+
+!bio.cov.dir     : ${datadir}/covariances/gridded_NH/
+!bio.cov.prefix  : cov_ecoregion
+
+!regtype         : gridded_oif30
+!nparameters     : 11
+!random.seed     : 4385
+!regionsfile     : /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/regions_cosmo.nc
+!extendedregionsfile     : /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/regions_cosmo.nc
+
+regionsfile     : /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+extendedregionsfile     : /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+
+!fracregionsfile     : /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_tc.nc
+!extendedregionsfile     : /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_regions.nc
+
+!regionsfile     : /store/empa/em05/parsenov/carbontracker/da/analysis/griddedNHparameters_from_ingrid.nc
+!random.seed.init: ${datadir}/randomseedinit.pickle
+
+! Include a naming scheme for the variables
+
+#include NamingScheme.wp_Mar2011.rc 
+
+! Info on the sites file used
+
+

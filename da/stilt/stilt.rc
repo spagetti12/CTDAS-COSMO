@@ -1,0 +1,23 @@
+! CarbonTracker Data Assimilation Shell (CTDAS) Copyright (C) 2017 Wouter Peters. 
+! Users are recommended to contact the developers (wouter.peters@wur.nl) to receive
+! updates of the code. See also: http://www.carbontracker.eu. 
+!
+! This program is free software: you can redistribute it and/or modify it under the
+! terms of the GNU General Public License as published by the Free Software Foundation, 
+! version 3. This program is distributed in the hope that it will be useful, but 
+! WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+! FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+!
+! You should have received a copy of the GNU General Public License along with this 
+! program. If not, see <http://www.gnu.org/licenses/>. 
+
+      sibdir : /Storage/ctdas-wrfstilt/sib3_fluxes/day1×1v2/
+      bgfdir : /Storage/co2simu/bgfluxes/3-hourly/
+    footpdir : /Storage/ctdas-wrfstilt/stilt_footprints/
+    bounddir : /Storage/co2simu/co2_boundary/co2_total/
+      samdir : /Storage/CO2/wei/ctdas-stilt-parallel-bc-only-newcov/input/
+      outdir : /Storage/CO2/wei/ctdas-stilt-parallel-bc-only-newcov/output/20100101
+        nsam : 100
+  ndayscycle : 10
+  sysstadate : 2010-01-01
+  cycstadate : 2010-01-01

@@ -1,0 +1,193 @@
+# CarbonTracker Data Assimilation Shell (CTDAS) Copyright (C) 2017 Wouter Peters. 
+# Users are recommended to contact the developers (wouter.peters@wur.nl) to receive
+# updates of the code. See also: http://www.carbontracker.eu. 
+#
+# This program is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software Foundation, 
+# version 3. This program is distributed in the hope that it will be useful, but 
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+#
+# You should have received a copy of the GNU General Public License along with this 
+# program. If not, see <http://www.gnu.org/licenses/>. 
+
+#! /bin/sh
+
+# --- init ---
+
+# leave on error
+set -e
+
+
+# --- external ---
+
+basename='/bin/basename'
+test ! -x ${basename}  &&  basename='/usr/bin/basename'
+
+egrep='/bin/egrep'
+test ! -x ${egrep}  &&  egrep='/usr/bin/egrep'
+
+less='/bin/less'
+test ! -x ${less}  &&  less='/usr/bin/less'
+test ! -x ${less}  &&  less='/usr/local/bin/less'
+
+sed='/bin/sed'
+test ! -x ${sed}  &&  sed='/usr/bin/sed'
+
+
+# --- definitions ---
+
+prog=`${basename} $0`
+
+
+# --- help ---
+
+DisplayHelp ()
+{
+${xPAGER:-${less}} << EOF
+$prog                     General Objects 
+
+NAME
+  $prog - read data value from a resource file
+ 
+SYNOPSIS
+  go_readrc <rcfile> <key> [<default>]
+  go_readrc -h|--help
+ 
+DESCRIPTION
+  A recourcefile is a text file with key/data pairs, usefull
+  to initialize programs (scripts, Fortran, etc).
+  The format of the <rcfile> is chosen close to the standard X resources:
+
+    * Comment lines start with '!'
+
+    * A key/data pair has the format:
+        <key> : <value>
+      where the white space (space or tabs) is optional.
+      The <key> consists of letters, numbers, '_', and '.' .
+      
+  Example of a valid rcfile:
+
+    ! Specify an output directory:
+    output.path : d/
+  
+  Given a text <key>, the <rcfile> is scanned for a line starting
+  with this key; all text behind the ':' is written to the standard output. 
+  Example of usage in sh script:
+  
+    output_root=\`go_readrc test.rc output.path\`
+    
+  If the <key> is not found, an error message is issued,
+  unless a <default> is supplied which is then written to standard output.
+  The <default> might be an empty string, e.g. '' .
+  
+PREPROCESSING
+  The rcfile might be preprocessed by go_pprc,
+  to expand environment variables.
+    
+EXIT STATUS
+  Non zero in case of any error.
+  
+SEE ALSO
+  X, go_pprc
+  
+AUTHOR
+  Arjo Segers
+EOF
+exit 0
+}
+
+ErrorMessage ()
+{
+  echo "ERROR in $prog: $1" 1>&2
+  echo "  Use '$prog -h' for information." 1>&2
+  exit 1
+}
+
+# --- arguments ---
+
+rcfile=''
+rckey=''
+with_default=''
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -h | --help )
+      DisplayHelp
+      ;;
+    -* )
+      ErrorMessage "unknown option '$1' ..."
+      ;;
+    * )
+      if [ -z "${rcfile}" ]; then
+        rcfile="$1"
+      elif [ -z "${rckey}" ]; then
+        rckey="$1"
+      elif [ -z "${with_default}" ]; then
+        default="$1"
+        with_default='true'
+      else
+        ErrorMessage "unknown argument '$1'"
+      fi
+      ;;
+  esac
+  shift
+done
+
+if [ -z "${rcfile}" -o -z "${rckey}" ]; then
+  ErrorMessage "missing arguments"
+fi
+
+# --- begin ---
+
+# does the rcfile exist?
+if [ ! -f ${rcfile} ]; then
+  ErrorMessage "rcfile '${rcfile}' does not exist ..."
+fi
+
+# replace '.' in the rckey by '\.'
+rckeydots=`echo ${rckey} | ${sed} -e 's/\./\\\\./g'`
+
+# 10 Apr 06: Andy Jacobson
+#   [[:space:]] indicates a space or tab character
+#wspace='[[:space:]]*'
+#
+# 26 Apr 06: Arjo Segers
+# The egrep on SGI system does not support the '[:space:]' ;
+# use a real tab character instead ...
+tab='	'
+wspace="[ ${tab}]*"
+
+# A key-data line has the following synopsis:
+#
+#    <begin-of-line><key>[<wspace>]:[<wspace>]<data>
+#
+# where <wspace> denote tabs or spaces.
+# Set regular expression for such a line except the <data> part;
+# this expression is used to search for a key and to extract
+# the data part:
+#
+re="^${rckeydots}${wspace}:${wspace}"
+
+# set grep command to select matching lines:
+selectlinecmd="${egrep} '${re}' ${rcfile}"
+
+# count number of hits; should be exactely 1 ...
+nfound=`eval "${selectlinecmd}" | /usr/bin/wc -l`
+if [ ${nfound} -eq 0 ]; then
+  if [ -z "${with_default}" ]; then
+    ErrorMessage "key '${rckey}' not found in ${rcfile} and no default specified ..."
+  else
+    echo "${default}"
+    exit 0
+  fi
+elif [ ${nfound} -gt 1 ]; then
+  ErrorMessage "key '${rckey}' found ${nfound} times in $rcfile ..."
+fi
+
+# extract the data part for this key;
+# substitute an empty string for the 'key : ' part;
+# remove trailing blanks;
+# output is written to standard output:
+eval "${selectlinecmd}" | ${sed} -e "s/${re}//" -e "s/${wspace}$//"
+

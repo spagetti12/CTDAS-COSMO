@@ -1,0 +1,64 @@
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : -v flag specified on command line: extra verbose output
+ [DEBUG  ] (2019-06-25 15:15:59) py-rc                   : reading rcfile octe.rc ...
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : DA Cycle rc-file (octe.rc) loaded successfully
+ [DEBUG  ] (2019-06-25 15:15:59) py-initexit             : DA Cycle settings have been validated succesfully
+ [DEBUG  ] (2019-06-25 15:15:59) py-rc                   : reading rcfile da/rc/carbontracker_cosmo.rc ...
+ [DEBUG  ] (2019-06-25 15:15:59) py-rc                   : Added rootdir to requested include: da/rc/NamingScheme.wp_Mar2011.rc
+ [DEBUG  ] (2019-06-25 15:15:59) py-dasystem             : DA System Info rc-file (da/rc/carbontracker_cosmo.rc) loaded successfully
+ [DEBUG  ] (2019-06-25 15:15:59) py-dasystem             : Data Assimilation System initialized: CarbonTracker CO2
+ [INFO   ] (2019-06-25 15:15:59) py-observationoperator_octe : Observation Operator object initialized: ObservationOperator
+ [INFO   ] (2019-06-25 15:15:59) py-obs                  : Observations object initialized: Observations baseclass
+ [INFO   ] (2019-06-25 15:15:59) py-statevector_mean     : Statevector object initialized: Baseclass Statevector 
+ [INFO   ] (2019-06-25 15:15:59) py-base_optimizer       : Optimizer object initialized: Optimizer baseclass
+ [INFO   ] (2019-06-25 15:15:59) py-template             : 
+
+    ***************************************   Entering Pipeline     *************************************** 
+  
+ [INFO   ] (2019-06-25 15:15:59) py-pipeline             : 
+
+    ***************************************   Initializing current cycle    *************************************** 
+  
+ [DEBUG  ] (2019-06-25 15:15:59) py-dasystem             : DA System Info settings have been validated succesfully
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : First time step in filter sequence
+ [DEBUG  ] (2019-06-25 15:15:59) py-general              : Using existing directory /scratch/snx3000/parsenov/octe
+ [DEBUG  ] (2019-06-25 15:15:59) py-general              : Using existing directory /scratch/snx3000/parsenov/octe/exec
+ [DEBUG  ] (2019-06-25 15:15:59) py-general              : Using existing directory /scratch/snx3000/parsenov/octe/input
+ [DEBUG  ] (2019-06-25 15:15:59) py-general              : Using existing directory /scratch/snx3000/parsenov/octe/output/20130401
+ [DEBUG  ] (2019-06-25 15:15:59) py-general              : Using existing directory /scratch/snx3000/parsenov/octe/analysis
+ [DEBUG  ] (2019-06-25 15:15:59) py-general              : Using existing directory /scratch/snx3000/parsenov/octe/jobs
+ [DEBUG  ] (2019-06-25 15:15:59) py-general              : Using existing directory /scratch/snx3000/parsenov/octe/restart
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : Succesfully created the file structure for the assimilation job
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : Copied regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : Copied extended regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : ===============================================================
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : DA Cycle start date is 2013-04-01 00:00
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : DA Cycle end date is 2013-04-07 23:00
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : DA Cycle final date is 2013-04-07 23:00
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : DA Cycle cycle length is 7
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : DA Cycle restart is False
+ [INFO   ] (2019-06-25 15:15:59) py-initexit             : ===============================================================
+ [DEBUG  ] (2019-06-25 15:15:59) py-statevector_mean     : A TransCom  map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-06-25 15:15:59) py-statevector_mean     : A parameter map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-06-25 15:15:59) py-statevector_mean     : A dictionary to map grids to states and vice versa was created
+ [DEBUG  ] (2019-06-25 15:15:59) py-statevector_mean     : A matrix to map states to TransCom regions and vice versa was created
+ [DEBUG  ] (2019-06-25 15:15:59) py-statevector_mean     : A species mask was created, only the following species are recognized in this system:
+ [DEBUG  ] (2019-06-25 15:15:59) py-statevector_mean     :    ->    co2
+ [INFO   ] (2019-06-25 15:15:59) py-pipeline             : 
+
+    ***************************************   starting prepare_state    *************************************** 
+  
+ [DEBUG  ] (2019-06-25 15:15:59) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2019-06-25 15:15:59) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 16
+IO Class CT_HDF not compiled, no HDF support!!!
+IO Class CT_HDF not compiled, no HDF support!!!
+1.0128439968067307
+Traceback (most recent call last):
+  File "template.py", line 76, in <module>
+    ensemble_smoother_pipeline(dacycle, platform, dasystem, samples, statevector, obsoperator, optimizer)
+  File "/store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/cosmo/pipeline.py", line 42, in ensemble_smoother_pipeline
+    prepare_state(dacycle, statevector)
+  File "/store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/cosmo/pipeline.py", line 250, in prepare_state
+    statevector.make_new_ensemble(n, cov)
+  File "/store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/cosmo/statevector_mean.py", line 308, in make_new_ensemble
+    sys.exit()
+NameError: name 'sys' is not defined

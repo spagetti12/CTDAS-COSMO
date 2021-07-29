@@ -1,0 +1,31 @@
+! CarbonTracker Data Assimilation Shell (CTDAS) Copyright (C) 2017 Wouter Peters. 
+! Users are recommended to contact the developers (wouter.peters@wur.nl) to receive
+! updates of the code. See also: http://www.carbontracker.eu. 
+!
+! This program is free software: you can redistribute it and/or modify it under the
+! terms of the GNU General Public License as published by the Free Software Foundation, 
+! version 3. This program is distributed in the hope that it will be useful, but 
+! WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+! FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+!
+! You should have received a copy of the GNU General Public License along with this 
+! program. If not, see <http://www.gnu.org/licenses/>. 
+
+!!! Info for the CarbonTracker data assimilation system
+
+datadir         : /scratch/shared/carbontracker/input/ctdas_2012/
+
+! For ObsPack
+
+obspack.input.dir   : ${datadir}/obspacks/${obspack.input.id}
+obspack.input.id   : obspack_sf6_1_PROTOTYPE_v0.9.0_2013-03-14
+obs.sites.rc        : ${obspack.input.dir}/summary/sites_weights_new_adjusted6.rc
+
+nparameters     : 1
+random.seed     : 4385
+regionsfile     : ${datadir}/covariances/olson/olsonparameters.nc
+
+! Include a naming scheme for the variables
+
+#include NamingScheme.wp_Mar2011.rc 
+

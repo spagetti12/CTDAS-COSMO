@@ -1,0 +1,34 @@
+! CarbonTracker Data Assimilation Shell (CTDAS) Copyright (C) 2017 Wouter Peters. 
+! Users are recommended to contact the developers (wouter.peters@wur.nl) to receive
+! updates of the code. See also: http://www.carbontracker.eu. 
+!
+! This program is free software: you can redistribute it and/or modify it under the
+! terms of the GNU General Public License as published by the Free Software Foundation, 
+! version 3. This program is distributed in the hope that it will be useful, but 
+! WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+! FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+!
+! You should have received a copy of the GNU General Public License along with this 
+! program. If not, see <http://www.gnu.org/licenses/>. 
+
+! Info on the data assimilation cycle
+
+time.restart        : False
+time.start          : 2007-01-01 00:00:00
+time.finish         : 2008-01-01 00:00:00
+time.cycle          : 10
+time.nlag           : 3
+dir.da_run          : /Storage/CO2/peters/test_region_obspack/
+
+
+! Info on the DA system used
+
+da.system           : CarbonTracker
+da.system.rc        : da/rc/carbontracker.rc
+
+! Info on the forward model to be used
+
+da.obsoperator         : TM5
+da.obsoperator.rc      : ../../../../Desktop/ctdirs/pycasso-tm5-ctdas.rc
+da.obsoperator.threads  : 2
+da.optimizer.nmembers  : 100

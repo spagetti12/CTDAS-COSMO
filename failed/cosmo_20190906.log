@@ -1,0 +1,1005 @@
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : -v flag specified on command line: extra verbose output
+ [DEBUG  ] (2019-09-04 23:05:01) py-rc                   : reading rcfile config.rc ...
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : DA Cycle rc-file (config.rc) loaded successfully
+ [DEBUG  ] (2019-09-04 23:05:01) py-initexit             : DA Cycle settings have been validated succesfully
+ [DEBUG  ] (2019-09-04 23:05:01) py-rc                   : reading rcfile da/rc/carbontracker_cosmo.rc ...
+ [DEBUG  ] (2019-09-04 23:05:01) py-rc                   : Added rootdir to requested include: da/rc/NamingScheme.wp_Mar2011.rc
+ [DEBUG  ] (2019-09-04 23:05:01) py-dasystem             : DA System Info rc-file (da/rc/carbontracker_cosmo.rc) loaded successfully
+ [DEBUG  ] (2019-09-04 23:05:01) py-dasystem             : Data Assimilation System initialized: CarbonTracker CO2
+ [INFO   ] (2019-09-04 23:05:01) py-observationoperator_cosmo : Observation Operator object initialized: ObservationOperator
+ [INFO   ] (2019-09-04 23:05:01) py-obs                  : Observations object initialized: Observations baseclass
+ [INFO   ] (2019-09-04 23:05:01) py-statevector_mean     : Statevector object initialized: Baseclass Statevector 
+ [INFO   ] (2019-09-04 23:05:01) py-base_optimizer       : Optimizer object initialized: Optimizer baseclass
+ [INFO   ] (2019-09-04 23:05:01) py-cosmo                : 
+
+    ***************************************   Entering Pipeline     *************************************** 
+  
+ [INFO   ] (2019-09-04 23:05:01) py-pipeline             : 
+
+    ***************************************   Initializing current cycle    *************************************** 
+  
+ [DEBUG  ] (2019-09-04 23:05:01) py-dasystem             : DA System Info settings have been validated succesfully
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : First time step in filter sequence
+ [INFO   ] (2019-09-04 23:05:01) py-general              : Creating new directory /scratch/snx3000/parsenov/real
+ [INFO   ] (2019-09-04 23:05:01) py-general              : Creating new directory /scratch/snx3000/parsenov/real/exec
+ [INFO   ] (2019-09-04 23:05:01) py-general              : Creating new directory /scratch/snx3000/parsenov/real/input
+ [INFO   ] (2019-09-04 23:05:01) py-general              : Creating new directory /scratch/snx3000/parsenov/real/output/20190301
+ [INFO   ] (2019-09-04 23:05:01) py-general              : Creating new directory /scratch/snx3000/parsenov/real/analysis
+ [INFO   ] (2019-09-04 23:05:01) py-general              : Creating new directory /scratch/snx3000/parsenov/real/jobs
+ [INFO   ] (2019-09-04 23:05:01) py-general              : Creating new directory /scratch/snx3000/parsenov/real/restart
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : Succesfully created the file structure for the assimilation job
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : Copied regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : Copied extended regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : ===============================================================
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : DA Cycle start date is 2019-03-01 00:00
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : DA Cycle end date is 2019-03-07 23:00
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : DA Cycle final date is 2019-03-07 23:00
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : DA Cycle cycle length is 7
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : DA Cycle restart is False
+ [INFO   ] (2019-09-04 23:05:01) py-initexit             : ===============================================================
+ [DEBUG  ] (2019-09-04 23:05:01) py-statevector_mean     : A TransCom  map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-09-04 23:05:01) py-statevector_mean     : A parameter map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-09-04 23:05:01) py-statevector_mean     : A dictionary to map grids to states and vice versa was created
+ [DEBUG  ] (2019-09-04 23:05:01) py-statevector_mean     : A matrix to map states to TransCom regions and vice versa was created
+ [DEBUG  ] (2019-09-04 23:05:01) py-statevector_mean     : A species mask was created, only the following species are recognized in this system:
+ [DEBUG  ] (2019-09-04 23:05:01) py-statevector_mean     :    ->    co2
+ [INFO   ] (2019-09-04 23:05:01) py-pipeline             : 
+
+    ***************************************   starting prepare_state    *************************************** 
+  
+ [DEBUG  ] (2019-09-04 23:05:02) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2019-09-04 23:05:02) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 3
+ [DEBUG  ] (2019-09-04 23:05:02) py-statevector_mean     : 21 new ensemble members were added to the state vector # 1
+ [DEBUG  ] (2019-09-04 23:05:02) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2019-09-04 23:05:02) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 3
+ [DEBUG  ] (2019-09-04 23:05:02) py-statevector_mean     : 21 new ensemble members were added to the state vector # 2
+ [DEBUG  ] (2019-09-04 23:05:02) py-statevector_mean     : Creating new StateVector output file (/scratch/snx3000/parsenov/real/restart/savestate_20190301.nc)
+ [INFO   ] (2019-09-04 23:05:02) py-statevector_mean     : Successfully wrote the State Vector to file (/scratch/snx3000/parsenov/real/restart/savestate_20190301.nc) 
+ [INFO   ] (2019-09-04 23:05:02) py-pipeline             : 
+
+    ***************************************   starting sample_state    *************************************** 
+  
+ [INFO   ] (2019-09-04 23:05:02) py-pipeline             : Sampling model will be run over 2 cycles
+ [INFO   ] (2019-09-04 23:05:02) py-pipeline             : 
+
+    ***************************************   .....Ensemble Kalman Filter at lag 1
+ [INFO   ] (2019-09-04 23:05:02) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-09-04 23:05:02) py-pipeline             :                   start date : 2019-03-01 00:00 
+ [INFO   ] (2019-09-04 23:05:02) py-pipeline             :                   end   date : 2019-03-07 23:00 
+ [INFO   ] (2019-09-04 23:05:02) py-pipeline             :                   file  stamp: 2019030100_2019030723 
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:03) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-09-04 23:05:04) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-09-04 23:05:04) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-09-04 23:05:04) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc)
+ [DEBUG  ] (2019-09-04 23:05:04) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-09-04 23:05:04) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc]
+ [DEBUG  ] (2019-09-04 23:05:04) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [INFO   ] (2019-09-04 23:05:04) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-01 00:00:00
+Process "meteo" for chain "2019030100_0_168"
+Process "icbc" for chain "2019030100_0_168"
+Process "int2lm" for chain "2019030100_0_168"
+Submitted batch job 16580509
+Process "post_int2lm" for chain "2019030100_0_168"
+Process "oae" for chain "2019030100_0_168"
+Process "octe" for chain "2019030100_0_168"
+Lambda-values for bg:
+ [1.0, 0.9478657, 0.9149966, 0.9908701, 1.0245199, 0.9460397, 0.98325855, 0.97370076, 0.993717, 0.9915731, 0.8969042, 1.0321764, 0.97275877, 0.96141106, 1.0217448, 0.96424866, 1.0295111, 1.0195287, 1.0308189, 1.0067407, 0.92864823]
+Process "online_vprm" for chain "2019030100_0_168"
+Process "cosmo" for chain "2019030100_0_168"
+Submitted batch job 16581342
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-09-05 08:54:23) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-09-05 08:54:45) py-observationoperator_cosmo : Starting parallel extraction \m/
+IO Class CT_HDF not compiled, no HDF support!!!
+IO Class CT_HDF not compiled, no HDF support!!!
+ [INFO   ] (2019-09-05 09:07:09) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-09-05 09:07:24) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [INFO   ] (2019-09-05 09:07:24) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [DEBUG  ] (2019-09-05 09:07:24) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-09-05 09:07:24) py-pipeline             : Added samples from the observation operator to the assimilated obs list in the statevector
+ [DEBUG  ] (2019-09-05 09:07:24) py-pipeline             : statevector now carries 154 samples
+ [INFO   ] (2019-09-05 09:07:24) py-pipeline             : 
+
+    ***************************************   .....Ensemble Kalman Filter at lag 2
+ [INFO   ] (2019-09-05 09:07:24) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-09-05 09:07:24) py-pipeline             :                   start date : 2019-03-08 00:00 
+ [INFO   ] (2019-09-05 09:07:24) py-pipeline             :                   end   date : 2019-03-14 23:00 
+ [INFO   ] (2019-09-05 09:07:24) py-pipeline             :                   file  stamp: 2019030800_2019031423 
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-09-05 09:07:26) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-09-05 09:07:26) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-09-05 09:07:26) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc)
+ [DEBUG  ] (2019-09-05 09:07:26) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-09-05 09:07:26) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc]
+ [DEBUG  ] (2019-09-05 09:07:26) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-09-05 09:07:26) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-08 00:00:00
+Process "meteo" for chain "2019030100_168_336"
+Process "icbc" for chain "2019030100_168_336"
+Process "int2lm" for chain "2019030100_168_336"
+Submitted batch job 16595201
+Process "post_int2lm" for chain "2019030100_168_336"
+Process "oae" for chain "2019030100_168_336"
+Process "octe" for chain "2019030100_168_336"
+Lambda-values for bg:
+ [1.0, 1.0364734, 1.0415553, 0.9629936, 0.9494043, 0.99930197, 0.9701274, 0.95360065, 0.97075206, 1.0014883, 1.0917985, 1.0197753, 0.97151804, 1.0759839, 0.9391592, 0.95001847, 0.97187597, 1.0206623, 0.98939747, 0.93654144, 1.0332247]
+Process "online_vprm" for chain "2019030100_168_336"
+Process "cosmo" for chain "2019030100_168_336"
+Submitted batch job 16595934
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-09-05 19:45:47) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-09-05 19:46:10) py-observationoperator_cosmo : Starting parallel extraction \m/
+ [INFO   ] (2019-09-05 19:59:00) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-09-05 19:59:17) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-09-05 19:59:17) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030800_2019031423.nc)
+ [DEBUG  ] (2019-09-05 19:59:17) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-09-05 19:59:17) py-pipeline             : Added samples from the observation operator to the assimilated obs list in the statevector
+ [DEBUG  ] (2019-09-05 19:59:17) py-pipeline             : statevector now carries 308 samples
+ [INFO   ] (2019-09-05 19:59:17) py-pipeline             : 
+
+    ***************************************   starting invert    *************************************** 
+  
+ [INFO   ] (2019-09-05 19:59:17) py-pipeline             : There was no minimum least squares algorithm specified in the DA System rc file (key : opt.algorithm)
+ [INFO   ] (2019-09-05 19:59:17) py-pipeline             : ...using serial algorithm as default...
+ [INFO   ] (2019-09-05 19:59:17) py-optimizer            : Current minimum least squares algorithm is set to Serial
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Creating new diagnostics file for optimizer (/scratch/snx3000/parsenov/real/output/20190301/optimizer.20190301.nc)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Diagnostics file closed
+ [INFO   ] (2019-09-05 19:59:17) py-optimizer            : Current localization option is set to None
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ALBS,1396) because residual (14.553809) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ALBS,1397) because residual (10.306793) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ALBS,1398) because residual (11.042412) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ALBS,1399) because residual (8.293652) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ALBS,1400) because residual (9.804514) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ALBS,1401) because residual (10.272484) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ALBS,1402) because residual (24.891112) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (BNTG,3907) because residual (11.074292) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (BNTG,3908) because residual (10.010044) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (BNTG,3909) because residual (14.149991) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (BNTG,3910) because residual (9.866785) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (BNTG,3911) because residual (8.252911) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (BNTG,3912) because residual (8.173118) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3913
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3913
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3913
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4651
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4651
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4652
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4652
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4653
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4653
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4654
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4654
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4655
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4655
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4656
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4656
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4657
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4657
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7255
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7255
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7255
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7256
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7256
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7256
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7257
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7257
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7257
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7258
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7258
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7258
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7259
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7259
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7259
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7260
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7260
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7260
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7261
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7261
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7261
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation DUE1, 12277
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation DUE1, 12277
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12278) because residual (-16.010497) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12279) because residual (5.424650) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12280) because residual (-17.054043) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12281) because residual (-16.679991) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12282) because residual (-22.259086) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation DUE1, 12283
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation DUE1, 12283
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ESMO,13765) because residual (12.521413) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13766
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13766
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13766
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13767
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13767
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13767
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13768
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13768
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13768
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13769
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13769
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13769
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13770
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13770
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13770
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ESMO,13771) because residual (16.783624) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (FROB,14974) because residual (9.852355) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14975
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14975
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14975
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14976
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14976
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14976
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14977
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14977
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14977
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14978
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14978
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14978
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14979
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14979
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14979
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (FROB,14980) because residual (11.441364) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (GIMM,15718) because residual (18.298875) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15719
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15719
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (GIMM,15720) because residual (5.859029) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15721
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15721
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15722
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15722
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15723
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15723
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (GIMM,15724) because residual (18.055539) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation HAE, 18136
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation HAE, 18136
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18137) because residual (-11.236839) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18138) because residual (-6.027953) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18139) because residual (-17.575821) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18140) because residual (-14.892414) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18141) because residual (-18.478204) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18142) because residual (15.043950) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (LAEG,21856) because residual (12.655933) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21857
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21857
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (LAEG,21858) because residual (5.033771) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21859
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21859
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21860
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21860
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21861
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21861
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (LAEG,21862) because residual (6.051300) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23716
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation MAGN, 23716
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 23716
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (MAGN,23717) because residual (-15.532376) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (MAGN,23718) because residual (-17.310910) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (MAGN,23719) because residual (-16.370917) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (MAGN,23720) because residual (23.610307) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (MAGN,23721) because residual (-16.454201) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23722
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation MAGN, 23722
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 23722
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28831
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation PAYN, 28831
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28832) because residual (-18.144891) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28833) because residual (-12.636709) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28834) because residual (-18.964098) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28835) because residual (-18.217414) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28836) because residual (-20.460551) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation PAYN, 28837
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation PAYN, 28837
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RECK, 30412
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation RECK, 30412
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 30412
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30413) because residual (-17.934278) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RECK, 30414
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation RECK, 30414
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 30414
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30415) because residual (-17.856421) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30416) because residual (-17.474569) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30417) because residual (-19.585571) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RECK, 30418
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation RECK, 30418
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 30418
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30970
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30970
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30971
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30971
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30972
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30972
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RIG,30973) because residual (-4.590395) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30974
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30974
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30975
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30975
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30976
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30976
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SAVE,32086) because residual (15.776149) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32087
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SAVE, 32087
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32087
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SAVE,32088) because residual (10.087253) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SAVE,32089) because residual (8.822667) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32090
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SAVE, 32090
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32090
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32091
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SAVE, 32091
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32091
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32092
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SAVE, 32092
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32092
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SEMP,32644) because residual (8.821928) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32645
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32645
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32645
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32646
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32646
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32646
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32647
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32647
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32647
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32648
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32648
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32648
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32649
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32649
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32649
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SEMP,32650) because residual (7.942344) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34504) because residual (-1418.283598) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34505) because residual (-1418.157049) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34506) because residual (-1419.357009) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34507) because residual (-1417.987371) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34508) because residual (-1416.737673) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34509) because residual (-1416.755422) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34510) because residual (-1418.197379) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34690) because residual (-1418.840060) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34691) because residual (-1418.180560) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34692) because residual (-1419.260688) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34693) because residual (-1417.795011) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34694) because residual (-1416.276910) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34695) because residual (-1416.574936) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34696) because residual (-1418.106760) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35341) because residual (-12.560859) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35342) because residual (-14.859270) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35343) because residual (-11.498750) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35344) because residual (-15.673879) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35345) because residual (-14.868191) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35346
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation TAEN, 35346
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 35346
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35347
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation TAEN, 35347
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 35347
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZHBR,40177) because residual (16.294284) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40178
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40178
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40178
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZHBR,40179) because residual (10.246862) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40180
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40180
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40180
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40181
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40181
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40181
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40182
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40182
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40182
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZHBR,40183) because residual (42.432104) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44083) because residual (10.446527) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44084
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZSCH, 44084
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44084
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44085) because residual (8.384841) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44086) because residual (-10.004262) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44087) because residual (-9.088245) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44088) because residual (-23.773022) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44089) because residual (54.303841) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44734
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZUE, 44734
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44734
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44735) because residual (-12.458329) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44736
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZUE, 44736
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44736
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44737) because residual (-14.904935) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44738) because residual (-13.791232) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44739) because residual (-25.373539) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44740) because residual (33.189060) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1403
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ALBS, 1403
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 1403
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1404
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ALBS, 1404
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 1404
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1405
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ALBS, 1405
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 1405
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1406
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ALBS, 1406
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 1406
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1407
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ALBS, 1407
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 1407
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1408
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ALBS, 1408
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 1408
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ALBS, 1409
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ALBS, 1409
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 1409
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3914
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3914
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3914
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3915
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3915
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3915
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3916
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3916
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3916
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3917
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3917
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3917
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3918
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3918
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3918
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3919
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3919
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3919
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BNTG, 3920
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation BNTG, 3920
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 3920
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4658
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4658
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4659
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4659
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4660
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4660
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4661
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4661
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4662
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4662
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation BRM, 4663
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation BRM, 4663
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (BRM,4664) because residual (5.368560) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7262
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7262
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7262
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7263
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7263
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7263
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7264
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7264
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7264
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7265
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7265
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7265
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7266
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7266
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7266
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7267
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7267
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7267
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation CHRI, 7268
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation CHRI, 7268
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 7268
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12284) because residual (-16.217894) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12285) because residual (-15.177565) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12286) because residual (-13.870967) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12287) because residual (-15.926312) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12288) because residual (-8.738572) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12289) because residual (-14.558141) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (DUE1,12290) because residual (-14.348341) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13772
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13772
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13772
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13773
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13773
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13773
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13774
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13774
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13774
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13775
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13775
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13775
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13776
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13776
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13776
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13777
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13777
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13777
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ESMO, 13778
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ESMO, 13778
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 13778
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14981
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14981
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14981
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14982
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14982
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14982
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14983
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14983
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14983
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14984
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14984
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14984
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14985
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14985
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14985
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (FROB,14986) because residual (8.730195) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation FROB, 14987
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation FROB, 14987
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 14987
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15725
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15725
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15726
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15726
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15727
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15727
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15728
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15728
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15729
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15729
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (GIMM,15730) because residual (8.351831) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation GIMM, 15731
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation GIMM, 15731
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18143) because residual (-15.374019) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18144) because residual (-6.577009) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18145) because residual (-16.433772) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18146) because residual (-17.005163) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18147) because residual (-13.554098) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation HAE, 18148
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation HAE, 18148
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (HAE,18149) because residual (-11.854606) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21863
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21863
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21864
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21864
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21865
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21865
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21866
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21866
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation LAEG, 21867
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation LAEG, 21867
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (LAEG,21868) because residual (4.597237) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (LAEG,21869) because residual (5.218506) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23723
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation MAGN, 23723
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 23723
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23724
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation MAGN, 23724
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 23724
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23725
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation MAGN, 23725
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 23725
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23726
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation MAGN, 23726
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 23726
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (MAGN,23727) because residual (-15.262318) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (MAGN,23728) because residual (-9.905773) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation MAGN, 23729
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation MAGN, 23729
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 23729
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28838) because residual (-16.911744) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28839) because residual (-14.292336) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28840) because residual (-13.528483) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28841) because residual (-13.815105) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28842) because residual (-13.517795) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28843) because residual (-8.629898) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (PAYN,28844) because residual (-15.197346) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30419) because residual (-15.718438) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30420) because residual (-14.957540) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30421) because residual (-14.177955) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30422) because residual (-14.944552) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30423) because residual (-14.808204) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30424) because residual (-9.853082) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RECK,30425) because residual (-14.789202) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30977
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30977
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30978
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30978
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30979
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30979
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30980
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30980
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30981
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30981
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation RIG, 30982
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Not allowed to localize observation RIG, 30982
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (RIG,30983) because residual (4.501816) exceeds threshold (4.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32093
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SAVE, 32093
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32093
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SAVE,32094) because residual (9.410801) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SAVE,32095) because residual (10.155078) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SAVE,32096) because residual (8.067201) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32097
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SAVE, 32097
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32097
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SAVE,32098) because residual (9.822377) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SAVE, 32099
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SAVE, 32099
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32099
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32651
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32651
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32651
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32652
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32652
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32652
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32653
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32653
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32653
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SEMP,32654) because residual (-7.781345) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32655
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32655
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32655
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32656
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32656
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32656
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation SEMP, 32657
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation SEMP, 32657
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 32657
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34511) because residual (-1414.745526) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34512) because residual (-1416.493302) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34513) because residual (-1416.835449) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34514) because residual (-1416.826643) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34515) because residual (-1416.558390) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34516) because residual (-1413.343922) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SOTT,34517) because residual (-1410.734049) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34697) because residual (-1414.704173) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34698) because residual (-1416.642029) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34699) because residual (-1416.548756) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34700) because residual (-1416.565051) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34701) because residual (-1416.936133) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34702) because residual (-1412.271466) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (SSAL,34703) because residual (-1410.164745) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35348) because residual (-14.245542) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35349) because residual (-12.555435) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35350) because residual (-13.472704) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35351) because residual (-12.525302) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation TAEN, 35352
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation TAEN, 35352
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 35352
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35353) because residual (-12.975996) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (TAEN,35354) because residual (-13.176807) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40184
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40184
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40184
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZHBR,40185) because residual (9.086813) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40186
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40186
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40186
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40187
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40187
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40187
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40188
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40188
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40188
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZHBR, 40189
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZHBR, 40189
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 40189
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZHBR,40190) because residual (8.494839) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44090) because residual (-7.940959) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44091) because residual (-7.577932) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44092
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZSCH, 44092
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44092
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZSCH,44093) because residual (-11.252083) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44094
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZSCH, 44094
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44094
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44095
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZSCH, 44095
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44095
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZSCH, 44096
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZSCH, 44096
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44096
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44741) because residual (-13.928109) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44742) because residual (-16.821370) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44743) because residual (-10.398469) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44744) because residual (-14.178785) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Proceeding to assimilate observation ZUE, 44745
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Trying to localize observation ZUE, 44745
+ [DEBUG  ] (2019-09-05 19:59:17) py-optimizer            : Not localized observation 44745
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44746) because residual (-10.360516) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Rejecting observation (ZUE,44747) because residual (-10.866869) exceeds threshold (7.500000)
+ [DEBUG  ] (2019-09-05 19:59:17) py-base_optimizer       : Returning optimized data to the StateVector, setting "StateVector.isOptimized = True" 
+ [DEBUG  ] (2019-09-05 19:59:18) py-base_optimizer       : Opening existing diagnostics file for optimizer (/scratch/snx3000/parsenov/real/output/20190301/optimizer.20190301.nc)
+ [DEBUG  ] (2019-09-05 19:59:18) py-base_optimizer       : Diagnostics file closed
+ [INFO   ] (2019-09-05 19:59:18) py-pipeline             : 
+
+    ***************************************   starting advance    *************************************** 
+  
+ [INFO   ] (2019-09-05 19:59:18) py-pipeline             : Sampling model will be run over 1 cycle
+ [INFO   ] (2019-09-05 19:59:18) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-09-05 19:59:18) py-pipeline             :                   start date : 2019-03-01 00:00 
+ [INFO   ] (2019-09-05 19:59:18) py-pipeline             :                   end   date : 2019-03-07 23:00 
+ [INFO   ] (2019-09-05 19:59:18) py-pipeline             :                   file  stamp: 2019030100_2019030723 
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-09-05 19:59:20) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-09-05 19:59:20) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-09-05 19:59:20) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc)
+ [DEBUG  ] (2019-09-05 19:59:20) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-09-05 19:59:20) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc]
+ [DEBUG  ] (2019-09-05 19:59:20) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [INFO   ] (2019-09-05 19:59:20) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-01 00:00:00
+Process "meteo" for chain "2019030100_0_168"
+Process "icbc" for chain "2019030100_0_168"
+Process "int2lm" for chain "2019030100_0_168"
+Submitted batch job 16603808
+Process "post_int2lm" for chain "2019030100_0_168"
+Process "oae" for chain "2019030100_0_168"
+Process "octe" for chain "2019030100_0_168"
+Lambda-values for bg:
+ [1.0285648, 1.0278745, 1.0274438, 1.0284398, 1.028881, 1.0278515, 1.0283399, 1.028215, 1.0284768, 1.028448, 1.0272055, 1.0289794, 1.0282023, 1.0280509, 1.0288447, 1.0280913, 1.0289457, 1.0288137, 1.0289624, 1.0286483, 1.0276228]
+Process "online_vprm" for chain "2019030100_0_168"
+Process "cosmo" for chain "2019030100_0_168"
+Submitted batch job 16604941
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-09-06 07:54:08) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-09-06 07:54:30) py-observationoperator_cosmo : Starting parallel extraction \m/
+chi2 0.17591566199146133
+chi2 0.828591989437066
+chi2 0.25107931173898657
+chi2 0.7383495760406784
+chi2 0.08421181648004615
+chi2 0.027983036784744595
+chi2 0.49113564714467
+chi2 0.018485911362816788
+chi2 6.210518072448622
+chi2 0.6204374342693296
+chi2 1.8291153651488705
+chi2 0.1653286317040288
+chi2 0.034234120432455384
+chi2 0.023488469544739998
+chi2 2.8257728111994953
+chi2 6.997622325079806
+chi2 4.547774069334818
+chi2 0.2012154217979589
+chi2 3.4341000469955265
+chi2 0.07075801427954984
+chi2 0.13006797716769236
+chi2 0.013013215835213839
+chi2 0.02002775014164364
+chi2 6.771251872304549
+chi2 3.100356589531979
+chi2 0.08609010593250595
+chi2 0.0064611765792230305
+chi2 0.4508013753796626
+chi2 2.9856961261038295
+chi2 0.39172466098304387
+chi2 0.0001750474934569222
+chi2 8.210337047900229
+chi2 0.6281517811413716
+chi2 0.33744692737676674
+chi2 0.8571441636846938
+chi2 0.08098185419916644
+chi2 4.989440280450091
+chi2 2.1862540045480903
+chi2 1.3846005482340444
+chi2 0.5992048270254992
+chi2 0.1281044537211989
+chi2 8.081693775242663
+chi2 3.7617321481295996
+chi2 7.6479661591171695
+chi2 2.789576700241495
+chi2 3.017485792162429
+chi2 1.1957135060396908
+chi2 0.7384635131242324
+chi2 0.5923560375581508
+chi2 0.2633175180937838
+chi2 0.1299736843699382
+chi2 5.377036230974017
+chi2 3.1155138877914808
+chi2 2.567164804214772
+chi2 0.009616289411978446
+chi2 0.273082120535558
+chi2 3.2018516113656204
+chi2 4.24609679636907
+chi2 0.8086631784786041
+chi2 2.2870377414511123
+chi2 7.1611614559246854
+chi2 0.005116884144260512
+chi2 0.3990774316998853
+chi2 1.5702604344405249
+chi2 4.306794681664276
+chi2 0.5673192444424535
+chi2 5.654557779361385
+chi2 0.0039013267747683962
+chi2 0.007036192709392103
+chi2 0.011061891592268787
+chi2 0.45526886737740074
+chi2 0.0018692912540935066
+chi2 2.1904357206733898
+chi2 4.369742993002544
+chi2 0.12021678279106085
+chi2 0.27228345747338534
+chi2 0.29560672132924964
+chi2 2.8227519592226527
+chi2 0.5099299893587497
+chi2 2.244412868010205
+chi2 1.3827416806597719
+chi2 0.16407690032081712
+chi2 0.017979781029657783
+chi2 0.0005309039484167667
+chi2 2.436632265169292
+chi2 0.07836001841700112
+chi2 4.127174480312004
+chi2 0.6310337734210902
+chi2 0.01748422372517305
+chi2 0.20166309682527978
+chi2 0.09951088729457365
+chi2 0.0441052708718042
+chi2 8.147649828952897
+chi2 2.7446220786485935
+chi2 0.7671580803726732
+chi2 1.2261562301969262
+chi2 0.10538226043370162
+chi2 0.046308399840108726
+chi2 0.11912638992263898
+chi2 7.998927040991402
+chi2 3.707817747214445
+chi2 0.09178016864285914
+chi2 0.5568817101195825
+chi2 0.581611246420491
+chi2 0.004481565561372077
+chi2 0.17137211843869365
+chi2 2.2563371983662828
+chi2 0.24786109411154633
+chi2 0.22461807579261137
+chi2 0.9686271364421639
+chi2 0.031365879863851004
+chi2 1.0245579135754153
+chi2 7.42941988050263
+chi2 0.5413449162280504
+chi2 0.3879461720340839
+chi2 3.7604418606079593
+chi2 0.7022793975867521
+chi2 0.07601089590780644
+chi2 0.5482694856359921
+chi2 5.545682621904756
+chi2 0.4252261208541098
+chi2 2.612253289238646
+chi2 4.671770457291596
+chi2 3.7134912474665405
+chi2 0.37012760635201825
+chi2 0.09836127030234032
+chi2 2.177733862826081
+chi2 8.080689168702415
+chi2 0.46309338553782137
+chi2 2.455030433241114
+chi2 2.3011482550995312
+chi2 0.10310632420571639
+chi2 6.1710609311528275
+chi2 1.4715361435093859
+chi2 2.261640876991092
+chi2 4.853708128629825
+chi2 2.3154013880436133
+chi2 0.644067969773785
+chi2 0.31144679659324065
+chi2 7.218724372733472
+chi2 3.189385945008115
+chi2 0.05340891737170827
+chi2 0.1393289009969992
+chi2 3.2894885491031975
+chi2 7.220072852534138
+chi2 3.4156647962051516
+chi2 0.551939992131795
+chi2 0.06728801390360832
+chi2 6.882607916215776
+chi2 4.95006538241637
+ [INFO   ] (2019-09-06 08:06:58) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-09-06 08:07:14) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [INFO   ] (2019-09-06 08:07:14) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [DEBUG  ] (2019-09-06 08:07:14) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-09-06 08:07:14) py-pipeline             : Appended ObsOperator restart and output file lists to dacycle for collection 
+ [DEBUG  ] (2019-09-06 08:07:14) py-pipeline             : Appended Observation filename to dacycle for collection: /scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc
+ [DEBUG  ] (2019-09-06 08:07:14) py-observations_cosmo   : Creating new auxiliary sample output file for postprocessing (/scratch/snx3000/parsenov/real/output/20190301/sample_auxiliary_2019030100_2019030723.nc)
+ [DEBUG  ] (2019-09-06 08:07:14) py-observations_cosmo   : Successfully wrote data to auxiliary sample output file (/scratch/snx3000/parsenov/real/output/20190301/sample_auxiliary_2019030100_2019030723.nc)
+ [INFO   ] (2019-09-06 08:07:14) py-pipeline             : 
+
+    ***************************************   starting save_and_submit    *************************************** 
+  
+ [DEBUG  ] (2019-09-06 08:07:14) py-statevector_mean     : Opening existing StateVector output file (/scratch/snx3000/parsenov/real/restart/savestate_20190301.nc)
+ [INFO   ] (2019-09-06 08:07:14) py-statevector_mean     : Successfully wrote the State Vector to file (/scratch/snx3000/parsenov/real/restart/savestate_20190301.nc) 
+ [INFO   ] (2019-09-06 08:07:14) py-initexit             : Saved the random seed generator values to file
+ [DEBUG  ] (2019-09-06 08:07:14) py-initexit             : Wrote new da_runtime.rc (/scratch/snx3000/parsenov/real/restart/da_runtime_20190308.rc) to restart dir
+ [INFO   ] (2019-09-06 08:07:14) py-initexit             : Collecting the required restart data
+ [DEBUG  ] (2019-09-06 08:07:14) py-initexit             :            to   directory: /scratch/snx3000/parsenov/real/restart 
+ [DEBUG  ] (2019-09-06 08:07:14) py-general              : Using existing directory /scratch/snx3000/parsenov/real/output/20190301
+ [INFO   ] (2019-09-06 08:07:14) py-initexit             : Collecting the required output data
+ [DEBUG  ] (2019-09-06 08:07:14) py-initexit             :            to   directory: /scratch/snx3000/parsenov/real/output/20190301 
+ [DEBUG  ] (2019-09-06 08:07:14) py-initexit             :            [copy] .... /scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc 
+ [DEBUG  ] (2019-09-06 08:07:14) py-initexit             :            [copy] .... /scratch/snx3000/parsenov/real/restart/savestate_20190301.nc 
+ [INFO   ] (2019-09-06 08:07:14) py-initexit             : Final date reached, no new cycle started
+ [INFO   ] (2019-09-06 08:07:14) py-pipeline             : Cycle finished...exiting pipeline
+ [INFO   ] (2019-09-06 08:07:14) py-cosmo                : 
+
+    ***************************************   All done. God bless    *************************************** 
+  

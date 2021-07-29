@@ -1,0 +1,107 @@
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : -v flag specified on command line: extra verbose output
+ [DEBUG  ] (2020-05-11 02:14:08) py-rc                   : reading rcfile config.rc ...
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : DA Cycle rc-file (config.rc) loaded successfully
+ [DEBUG  ] (2020-05-11 02:14:08) py-initexit             : DA Cycle settings have been validated succesfully
+ [DEBUG  ] (2020-05-11 02:14:08) py-rc                   : reading rcfile da/rc/carbontracker_cosmo.rc ...
+ [DEBUG  ] (2020-05-11 02:14:08) py-rc                   : Added rootdir to requested include: da/rc/NamingScheme.wp_Mar2011.rc
+ [DEBUG  ] (2020-05-11 02:14:08) py-dasystem             : DA System Info rc-file (da/rc/carbontracker_cosmo.rc) loaded successfully
+ [DEBUG  ] (2020-05-11 02:14:08) py-dasystem             : Data Assimilation System initialized: CarbonTracker CO2
+ [INFO   ] (2020-05-11 02:14:08) py-observationoperator_cosmo : Observation Operator object initialized: ObservationOperator
+ [INFO   ] (2020-05-11 02:14:08) py-obs                  : Observations object initialized: Observations baseclass
+ [INFO   ] (2020-05-11 02:14:08) py-statevector_mean     : Statevector object initialized: Baseclass Statevector 
+ [INFO   ] (2020-05-11 02:14:08) py-base_optimizer       : Optimizer object initialized: Optimizer baseclass
+ [INFO   ] (2020-05-11 02:14:08) py-cosmo                : 
+
+    ***************************************   Entering Pipeline     *************************************** 
+  
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             : 
+
+    ***************************************   Initializing current cycle    *************************************** 
+  
+ [DEBUG  ] (2020-05-11 02:14:08) py-dasystem             : DA System Info settings have been validated succesfully
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : First time step in filter sequence
+ [DEBUG  ] (2020-05-11 02:14:08) py-general              : Using existing directory /scratch/snx3000/parsenov/synthetic
+ [DEBUG  ] (2020-05-11 02:14:08) py-general              : Using existing directory /scratch/snx3000/parsenov/synthetic/exec
+ [DEBUG  ] (2020-05-11 02:14:08) py-general              : Using existing directory /scratch/snx3000/parsenov/synthetic/input
+ [DEBUG  ] (2020-05-11 02:14:08) py-general              : Using existing directory /scratch/snx3000/parsenov/synthetic/output/20190501
+ [DEBUG  ] (2020-05-11 02:14:08) py-general              : Using existing directory /scratch/snx3000/parsenov/synthetic/analysis
+ [DEBUG  ] (2020-05-11 02:14:08) py-general              : Using existing directory /scratch/snx3000/parsenov/synthetic/jobs
+ [DEBUG  ] (2020-05-11 02:14:08) py-general              : Using existing directory /scratch/snx3000/parsenov/synthetic/restart
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : Succesfully created the file structure for the assimilation job
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : Copied regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : Copied extended regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : ===============================================================
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : DA Cycle start date is 2019-05-01 00:00
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : DA Cycle end date is 2019-05-07 23:00
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : DA Cycle final date is 2019-05-07 23:00
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : DA Cycle cycle length is 7
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : DA Cycle restart is False
+ [INFO   ] (2020-05-11 02:14:08) py-initexit             : ===============================================================
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : A TransCom  map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : A parameter map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : A dictionary to map grids to states and vice versa was created
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : A matrix to map states to TransCom regions and vice versa was created
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : A species mask was created, only the following species are recognized in this system:
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     :    ->    co2
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             : 
+
+    ***************************************   starting prepare_state    *************************************** 
+  
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2020-05-11 02:14:08) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 20
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : 41 new ensemble members were added to the state vector # 1
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2020-05-11 02:14:08) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 20
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : 41 new ensemble members were added to the state vector # 2
+ [DEBUG  ] (2020-05-11 02:14:08) py-statevector_mean     : Creating new StateVector output file (/scratch/snx3000/parsenov/synthetic/restart/savestate_20190501.nc)
+ [INFO   ] (2020-05-11 02:14:08) py-statevector_mean     : Successfully wrote the State Vector to file (/scratch/snx3000/parsenov/synthetic/restart/savestate_20190501.nc) 
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             : 
+
+    ***************************************   starting sample_state    *************************************** 
+  
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             : Sampling model will be run over 2 cycles
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             : 
+
+    ***************************************   .....Ensemble Kalman Filter at lag 1
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             :                   start date : 2019-05-01 00:00 
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             :                   end   date : 2019-05-07 23:00 
+ [INFO   ] (2020-05-11 02:14:08) py-pipeline             :                   file  stamp: 2019050100_2019050723 
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2020-05-11 02:14:08) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2020-05-11 02:14:08) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2020-05-11 02:14:08) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/synthetic/input/sample_coordinates_2019050100_2019050723.nc)
+ [DEBUG  ] (2020-05-11 02:14:08) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2020-05-11 02:14:08) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/synthetic/input/sample_coordinates_2019050100_2019050723.nc]
+ [DEBUG  ] (2020-05-11 02:14:08) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/synthetic/output/20190501/samples_simulated.2019050100_2019050723.nc)
+ [INFO   ] (2020-05-11 02:14:08) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case e01, using COSMO
+Starting run with starttime 2019-05-01 00:00:00
+Process "meteo" for chain "2019050100_0_168"

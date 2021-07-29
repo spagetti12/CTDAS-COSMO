@@ -1,0 +1,48 @@
+! CarbonTracker Data Assimilation Shell (CTDAS) Copyright (C) 2017 Wouter Peters. 
+! Users are recommended to contact the developers (wouter.peters@wur.nl) to receive
+! updates of the code. See also: http://www.carbontracker.eu. 
+!
+! This program is free software: you can redistribute it and/or modify it under the
+! terms of the GNU General Public License as published by the Free Software Foundation, 
+! version 3. This program is distributed in the hope that it will be useful, but 
+! WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+! FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+!
+! You should have received a copy of the GNU General Public License along with this 
+! program. If not, see <http://www.gnu.org/licenses/>. 
+
+!!! Info for the CarbonTracker data assimilation system
+
+datadir         : /Storage/CO2/carbontracker/input/ctdas_2012/ 
+
+! For ObsPack
+!obspack.input.dir  : ${datadir}/obspacks/${obspack.input.id}
+!obspack.input.id   : obspack_co2_1_PROTOTYPE_v1.0.3_2013-01-29
+
+obspack.input.dir  : /Storage/ctdas-wrfstilt/obspack/${obspack.input.id}
+obspack.input.id   : obspack_co2_111_CO2_v1.0.1_2015-05-19
+
+ocn.covariance  : ${datadir}/covariances/ocean_oif/oif_p3_era40.dpco2.2000.01.hdf 
+!ocn.covariance  : ${datadir}/covariances/ocean_oif/cov_ocean.2000.01.nc
+!bio.covariance  : ${datadir}/covariances/olson/cov_olsonregion_001_209.nc
+!bio.covariance  : ${datadir}/covariances/olson/covariance_bio_olson19.nc
+bio.cov.dir  : /Storage/ivar/cov_L300_new/
+bio.cov.prefix : cov_ecoregion
+deltaco2.prefix : oif_p3_era40.dpco2
+regtype         : olson19_oif30
+nparameters     : 3079 
+random.seed     : 4385
+random.seed.init: ${datadir}/randomseedinit.pickle
+
+!regionsfile     : ${datadir}/covariances/olson/olsonparameters.nc
+regionsfile     : /Storage/ivar/cov_L300_new/griddedNAparameters.nc
+
+! Include a naming scheme for the variables
+
+#include NamingScheme.wp_Mar2011.rc 
+
+! Info on the sites file used
+
+! For ObsPack
+!obs.sites.rc        : ${obspack.input.dir}/summary/sites_weights_geocarbon.rc
+obs.sites.rc        : ${obspack.input.dir}/summary/sites_weights_stilt-updatedfoot-ivar.rc

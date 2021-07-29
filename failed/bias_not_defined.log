@@ -1,0 +1,1155 @@
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : -v flag specified on command line: extra verbose output
+ [DEBUG  ] (2019-09-02 15:05:08) py-rc                   : reading rcfile config.rc ...
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : DA Cycle rc-file (config.rc) loaded successfully
+ [DEBUG  ] (2019-09-02 15:05:08) py-initexit             : DA Cycle settings have been validated succesfully
+ [DEBUG  ] (2019-09-02 15:05:08) py-rc                   : reading rcfile da/rc/carbontracker_cosmo.rc ...
+ [DEBUG  ] (2019-09-02 15:05:08) py-rc                   : Added rootdir to requested include: da/rc/NamingScheme.wp_Mar2011.rc
+ [DEBUG  ] (2019-09-02 15:05:08) py-dasystem             : DA System Info rc-file (da/rc/carbontracker_cosmo.rc) loaded successfully
+ [DEBUG  ] (2019-09-02 15:05:08) py-dasystem             : Data Assimilation System initialized: CarbonTracker CO2
+ [INFO   ] (2019-09-02 15:05:08) py-observationoperator_cosmo : Observation Operator object initialized: ObservationOperator
+ [INFO   ] (2019-09-02 15:05:08) py-obs                  : Observations object initialized: Observations baseclass
+ [INFO   ] (2019-09-02 15:05:08) py-statevector_mean     : Statevector object initialized: Baseclass Statevector 
+ [INFO   ] (2019-09-02 15:05:08) py-base_optimizer       : Optimizer object initialized: Optimizer baseclass
+ [INFO   ] (2019-09-02 15:05:08) py-cosmo                : 
+
+    ***************************************   Entering Pipeline     *************************************** 
+  
+ [INFO   ] (2019-09-02 15:05:08) py-pipeline             : 
+
+    ***************************************   Initializing current cycle    *************************************** 
+  
+ [DEBUG  ] (2019-09-02 15:05:08) py-dasystem             : DA System Info settings have been validated succesfully
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : First time step in filter sequence
+ [INFO   ] (2019-09-02 15:05:08) py-general              : Creating new directory /scratch/snx3000/parsenov/real
+ [INFO   ] (2019-09-02 15:05:08) py-general              : Creating new directory /scratch/snx3000/parsenov/real/exec
+ [INFO   ] (2019-09-02 15:05:08) py-general              : Creating new directory /scratch/snx3000/parsenov/real/input
+ [INFO   ] (2019-09-02 15:05:08) py-general              : Creating new directory /scratch/snx3000/parsenov/real/output/20190301
+ [INFO   ] (2019-09-02 15:05:08) py-general              : Creating new directory /scratch/snx3000/parsenov/real/analysis
+ [INFO   ] (2019-09-02 15:05:08) py-general              : Creating new directory /scratch/snx3000/parsenov/real/jobs
+ [INFO   ] (2019-09-02 15:05:08) py-general              : Creating new directory /scratch/snx3000/parsenov/real/restart
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : Succesfully created the file structure for the assimilation job
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : Copied regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : Copied extended regions file to the analysis directory: /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : ===============================================================
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : DA Cycle start date is 2019-03-01 00:00
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : DA Cycle end date is 2019-03-07 23:00
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : DA Cycle final date is 2019-03-07 23:00
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : DA Cycle cycle length is 7
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : DA Cycle restart is False
+ [INFO   ] (2019-09-02 15:05:08) py-initexit             : ===============================================================
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : A TransCom  map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : A parameter map on 1x1 degree was read from file /store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/analysis/cosmo_9_reg_mittel_4.nc
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : A dictionary to map grids to states and vice versa was created
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : A matrix to map states to TransCom regions and vice versa was created
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : A species mask was created, only the following species are recognized in this system:
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     :    ->    co2
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             : 
+
+    ***************************************   starting prepare_state    *************************************** 
+  
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2019-09-02 15:05:09) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 3
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : 21 new ensemble members were added to the state vector # 1
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : Cholesky decomposition has succeeded 
+ [INFO   ] (2019-09-02 15:05:09) py-statevector_mean     : Appr. degrees of freedom in covariance matrix is 3
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : 21 new ensemble members were added to the state vector # 2
+ [DEBUG  ] (2019-09-02 15:05:09) py-statevector_mean     : Creating new StateVector output file (/scratch/snx3000/parsenov/real/restart/savestate_20190301.nc)
+ [INFO   ] (2019-09-02 15:05:09) py-statevector_mean     : Successfully wrote the State Vector to file (/scratch/snx3000/parsenov/real/restart/savestate_20190301.nc) 
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             : 
+
+    ***************************************   starting sample_state    *************************************** 
+  
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             : Sampling model will be run over 2 cycles
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             : 
+
+    ***************************************   .....Ensemble Kalman Filter at lag 1
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             :                   start date : 2019-03-01 00:00 
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             :                   end   date : 2019-03-07 23:00 
+ [INFO   ] (2019-09-02 15:05:09) py-pipeline             :                   file  stamp: 2019030100_2019030723 
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:11) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-09-02 15:05:12) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-09-02 15:05:12) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-09-02 15:05:12) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc)
+ [DEBUG  ] (2019-09-02 15:05:12) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-09-02 15:05:12) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030100_2019030723.nc]
+ [DEBUG  ] (2019-09-02 15:05:12) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [INFO   ] (2019-09-02 15:05:12) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-01 00:00:00
+Process "meteo" for chain "2019030100_0_168"
+Process "icbc" for chain "2019030100_0_168"
+Process "int2lm" for chain "2019030100_0_168"
+Submitted batch job 16534206
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+Process "post_int2lm" for chain "2019030100_0_168"
+Process "oae" for chain "2019030100_0_168"
+Process "octe" for chain "2019030100_0_168"
+Lambda-values for bg:
+ [1.0, 1.0159063, 1.0721369, 0.94806933, 0.9877239, 0.9955308, 1.0812802, 1.0243499, 1.060589, 1.0399262, 1.065593, 0.9224508, 1.0401889, 1.0685343, 0.9880958, 1.0420858, 1.0263698, 1.0045601, 1.0291039, 0.91895354, 1.0509094]
+Process "online_vprm" for chain "2019030100_0_168"
+Process "cosmo" for chain "2019030100_0_168"
+Submitted batch job 16536732
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-09-03 03:17:52) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-09-03 03:18:16) py-observationoperator_cosmo : Starting parallel extraction \m/
+IO Class CT_HDF not compiled, no HDF support!!!
+IO Class CT_HDF not compiled, no HDF support!!!
+ [INFO   ] (2019-09-03 03:31:22) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-09-03 03:31:37) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [INFO   ] (2019-09-03 03:31:37) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030100_2019030723.nc)
+ [DEBUG  ] (2019-09-03 03:31:37) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-09-03 03:31:37) py-pipeline             : Added samples from the observation operator to the assimilated obs list in the statevector
+ [DEBUG  ] (2019-09-03 03:31:37) py-pipeline             : statevector now carries 154 samples
+ [INFO   ] (2019-09-03 03:31:37) py-pipeline             : 
+
+    ***************************************   .....Ensemble Kalman Filter at lag 2
+ [INFO   ] (2019-09-03 03:31:37) py-pipeline             : New simulation interval set : 
+ [INFO   ] (2019-09-03 03:31:37) py-pipeline             :                   start date : 2019-03-08 00:00 
+ [INFO   ] (2019-09-03 03:31:37) py-pipeline             :                   end   date : 2019-03-14 23:00 
+ [INFO   ] (2019-09-03 03:31:37) py-pipeline             :                   file  stamp: 2019030800_2019031423 
+ [DEBUG  ] (2019-09-03 03:31:38) py-observations_cosmo   : ObsPack dataset info read, proceeding with 22 netcdf files
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (ALBS) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (BNTG) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (BRM) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (CHRI) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (DUE1) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (ESMO) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (FROB) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (GIMM) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (HAE) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (LAEG) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (MAGN) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (PAYN) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (RECK) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (RIG) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (SAVE) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (SEMP) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (SOTT) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (SSAL) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (TAEN) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (ZHBR) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (ZSCH) to the Data list
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Added 7 observations from file (ZUE) to the Data list
+ [INFO   ] (2019-09-03 03:31:39) py-observations_cosmo   : Observations list now holds 154 values
+ [DEBUG  ] (2019-09-03 03:31:39) py-rc                   : reading rcfile /store/empa/em05/parsenov/ch_obs/sites_weights_ctdas.rc ...
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Model-data mismatch rejection threshold: 3 
+ [WARNING] (2019-09-03 03:31:39) py-observations_cosmo   : Model-data mismatch scaling factor     : 1.000000 
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Model-data mismatch site categories    : 8 
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Model-data mismatch active sites       : 22 
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Model-data mismatch moved sites        : 0 
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Creating new observations file for ObservationOperator (/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc)
+ [DEBUG  ] (2019-09-03 03:31:39) py-observations_cosmo   : Successfully wrote data to obs file
+ [INFO   ] (2019-09-03 03:31:39) py-observations_cosmo   : Sample input file for obs operator now in place [/scratch/snx3000/parsenov/real/input/sample_coordinates_2019030800_2019031423.nc]
+ [DEBUG  ] (2019-09-03 03:31:39) py-observationoperator_cosmo : Creating new simulated observation file in ObservationOperator (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-09-03 03:31:39) py-observationoperator_cosmo : Starting COSMO
+Starting chain for case real, using COSMO
+Starting run with starttime 2019-03-08 00:00:00
+Process "meteo" for chain "2019030100_168_336"
+Process "icbc" for chain "2019030100_168_336"
+Process "int2lm" for chain "2019030100_168_336"
+Submitted batch job 16553143
+Process "post_int2lm" for chain "2019030100_168_336"
+Process "oae" for chain "2019030100_168_336"
+Process "octe" for chain "2019030100_168_336"
+Lambda-values for bg:
+ [1.0, 0.98482937, 0.96023244, 0.9886177, 0.8989117, 1.04342, 1.0089836, 1.0600876, 1.0169847, 1.0321592, 0.96458775, 1.040843, 0.9586093, 1.0106876, 1.092912, 0.95986575, 0.9890921, 1.0250123, 0.91098267, 0.8995135, 1.0239397]
+Process "online_vprm" for chain "2019030100_168_336"
+Process "cosmo" for chain "2019030100_168_336"
+Submitted batch job 16554522
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+sbatch: error: Currently unable to load job state information, retrying: Socket timed out on send/recv operation
+>>> finished chain for good or bad! <<<
+ [INFO   ] (2019-09-03 14:09:09) py-observationoperator_cosmo : COSMO done!
+ [INFO   ] (2019-09-03 14:09:34) py-observationoperator_cosmo : Starting parallel extraction \m/
+j 0
+data (1396, 422.79105, 2.5)
+model data 408.23724365234375
+j 1
+data (1397, 417.8264, 2.5)
+model data 407.51959228515625
+j 2
+data (1398, 419.6315, 2.5)
+model data 408.5890808105469
+j 3
+data (1399, 415.65192, 2.5)
+model data 407.3582763671875
+j 4
+data (1400, 415.49295, 2.5)
+model data 405.6884460449219
+j 5
+data (1401, 416.0954, 2.5)
+model data 405.8229064941406
+j 6
+data (1402, 431.87558, 2.5)
+model data 406.9844665527344
+j 7
+data (3907, 419.27124, 2.5)
+model data 408.19696044921875
+j 8
+data (3908, 417.42593, 2.5)
+model data 407.4158935546875
+j 9
+data (3909, 422.58243, 2.5)
+model data 408.43243408203125
+j 10
+data (3910, 417.0018, 2.5)
+model data 407.135009765625
+j 11
+data (3911, 413.94186, 2.5)
+model data 405.68896484375
+j 12
+data (3912, 413.96613, 2.5)
+model data 405.7929992675781
+j 13
+data (3913, 414.73553, 2.5)
+model data 407.2547607421875
+j 14
+data (4651, 418.2225, 1.5)
+model data 408.2318420410156
+j 15
+data (4652, 417.74982, 1.5)
+model data 407.4938049316406
+j 16
+data (4653, 419.74582, 1.5)
+model data 408.4993591308594
+j 17
+data (4654, 416.8489, 1.5)
+model data 407.2101745605469
+j 18
+data (4655, 415.92084, 1.5)
+model data 405.65997314453125
+j 19
+data (4656, 416.9997, 1.5)
+model data 405.8172302246094
+j 20
+data (4657, 417.05746, 1.5)
+model data 407.0295715332031
+j 21
+data (7255, 424.83572, 2.5)
+model data 408.2072448730469
+j 22
+data (7256, 420.00433, 2.5)
+model data 407.4631042480469
+j 23
+data (7257, 422.52206, 2.5)
+model data 408.42462158203125
+j 24
+data (7258, 416.89868, 2.5)
+model data 407.1799011230469
+j 25
+data (7259, 415.71088, 2.5)
+model data 405.5122985839844
+j 26
+data (7260, 415.98196, 2.5)
+model data 405.71514892578125
+j 27
+data (7261, 421.88748, 2.5)
+model data 406.9317626953125
+j 28
+data (12277, 444.02115, 1.5)
+model data 428.50677490234375
+j 29
+data (12278, 423.03568, 1.5)
+model data 427.3525695800781
+j 30
+data (12279, 442.32224, 1.5)
+model data 425.42449951171875
+j 31
+data (12280, 418.48834, 1.5)
+model data 423.89605712890625
+j 32
+data (12281, 418.74207, 1.5)
+model data 423.8616638183594
+j 33
+data (12282, 419.84143, 1.5)
+model data 430.8163757324219
+j 34
+data (12283, 440.9085, 1.5)
+model data 425.8898620605469
+j 35
+data (13765, 432.32434, 2.5)
+model data 408.2508544921875
+j 36
+data (13766, 420.11417, 2.5)
+model data 407.4467468261719
+j 37
+data (13767, 424.93082, 2.5)
+model data 408.6346435546875
+j 38
+data (13768, 418.30923, 2.5)
+model data 407.2924499511719
+j 39
+data (13769, 416.3585, 2.5)
+model data 405.6468811035156
+j 40
+data (13770, 417.67154, 2.5)
+model data 405.7776184082031
+j 41
+data (13771, 435.48016, 2.5)
+model data 407.0477600097656
+j 42
+data (14974, 429.7001, 2.5)
+model data 408.1669616699219
+j 43
+data (14975, 418.7843, 2.5)
+model data 407.4814758300781
+j 44
+data (14976, 426.6588, 2.5)
+model data 408.392822265625
+j 45
+data (14977, 423.51855, 2.5)
+model data 407.2535095214844
+j 46
+data (14978, 416.69397, 2.5)
+model data 405.5690002441406
+j 47
+data (14979, 417.41638, 2.5)
+model data 405.76409912109375
+j 48
+data (14980, 430.29532, 2.5)
+model data 406.9678649902344
+j 49
+data (15718, 438.43753, 1.5)
+model data 408.2160949707031
+j 50
+data (15719, 418.2954, 1.5)
+model data 407.4345703125
+j 51
+data (15720, 426.2224, 1.5)
+model data 408.495361328125
+j 52
+data (15721, 421.47003, 1.5)
+model data 406.9775390625
+j 53
+data (15722, 416.60504, 1.5)
+model data 405.63433837890625
+j 54
+data (15723, 417.63156, 1.5)
+model data 405.76397705078125
+j 55
+data (15724, 437.2574, 1.5)
+model data 407.2707824707031
+j 56
+data (18136, 445.52908, 1.5)
+model data 428.5104675292969
+j 57
+data (18137, 427.63785, 1.5)
+model data 426.138671875
+j 58
+data (18138, 431.23474, 1.5)
+model data 424.6797180175781
+j 59
+data (18139, 419.64493, 1.5)
+model data 424.5505676269531
+j 60
+data (18140, 421.0082, 1.5)
+model data 423.3890686035156
+j 61
+data (18141, 421.29617, 1.5)
+model data 427.2309265136719
+j 62
+data (18142, 452.07556, 1.5)
+model data 424.4439697265625
+j 63
+data (21856, 433.04562, 1.5)
+model data 408.21331787109375
+j 64
+data (21857, 420.8239, 1.5)
+model data 407.452880859375
+j 65
+data (21858, 425.84518, 1.5)
+model data 408.5679931640625
+j 66
+data (21859, 420.3562, 1.5)
+model data 407.2607116699219
+j 67
+data (21860, 416.403, 1.5)
+model data 405.6273498535156
+j 68
+data (21861, 418.35117, 1.5)
+model data 405.7760314941406
+j 69
+data (21862, 425.24417, 1.5)
+model data 406.999267578125
+j 70
+data (23716, 440.24808, 2.5)
+model data 421.9482727050781
+j 71
+data (23717, 417.98767, 2.5)
+model data 420.7552795410156
+j 72
+data (23718, 416.04492, 2.5)
+model data 420.5243225097656
+j 73
+data (23719, 422.56042, 2.5)
+model data 425.9969482421875
+j 74
+data (23720, 456.9546, 2.5)
+model data 420.691162109375
+j 75
+data (23721, 420.17642, 2.5)
+model data 423.9131774902344
+j 76
+data (23722, 439.61655, 2.5)
+model data 430.4234924316406
+j 77
+data (28831, 440.08002, 1.5)
+model data 425.4715270996094
+j 78
+data (28832, 418.09714, 1.5)
+model data 423.446533203125
+j 79
+data (28833, 422.5096, 1.5)
+model data 422.4162292480469
+j 80
+data (28834, 417.47525, 1.5)
+model data 423.5207214355469
+j 81
+data (28835, 416.9167, 1.5)
+model data 422.41571044921875
+j 82
+data (28836, 417.3449, 1.5)
+model data 425.2711486816406
+j 83
+data (28837, 434.84927, 1.5)
+model data 423.2677307128906
+j 84
+data (30412, 440.60385, 2.5)
+model data 428.6137390136719
+j 85
+data (30413, 422.23492, 2.5)
+model data 427.4143981933594
+j 86
+data (30414, 431.55347, 2.5)
+model data 426.1978759765625
+j 87
+data (30415, 419.045, 2.5)
+model data 424.27960205078125
+j 88
+data (30416, 418.96658, 2.5)
+model data 423.96185302734375
+j 89
+data (30417, 419.28564, 2.5)
+model data 428.5788879394531
+j 90
+data (30418, 443.22476, 2.5)
+model data 425.69378662109375
+j 91
+data (30970, 416.28296, 1.5)
+model data 408.2626953125
+j 92
+data (30971, 417.03903, 1.5)
+model data 407.510986328125
+j 93
+data (30972, 417.93356, 1.5)
+model data 408.5587158203125
+j 94
+data (30973, 414.76968, 1.5)
+model data 407.4536437988281
+j 95
+data (30974, 415.95117, 1.5)
+model data 405.75994873046875
+j 96
+data (30975, 416.3652, 1.5)
+model data 405.86431884765625
+j 97
+data (30976, 417.7247, 1.5)
+model data 407.0899353027344
+j 98
+data (32086, 435.50226, 2.5)
+model data 407.92938232421875
+j 99
+data (32087, 417.98315, 2.5)
+model data 407.4886779785156
+j 100
+data (32088, 430.40472, 2.5)
+model data 408.5170593261719
+j 101
+data (32089, 427.7467, 2.5)
+model data 407.1627502441406
+j 102
+data (32090, 416.65427, 2.5)
+model data 405.837158203125
+j 103
+data (32091, 423.55045, 2.5)
+model data 406.00537109375
+j 104
+data (32092, 423.69986, 2.5)
+model data 407.44610595703125
+j 105
+data (32644, 428.97614, 2.5)
+model data 408.2671203613281
+j 106
+data (32645, 415.3247, 2.5)
+model data 407.4859313964844
+j 107
+data (32646, 420.13666, 2.5)
+model data 408.5282897949219
+j 108
+data (32647, 417.7573, 2.5)
+model data 407.2547302246094
+j 109
+data (32648, 412.9508, 2.5)
+model data 405.68841552734375
+j 110
+data (32649, 412.38083, 2.5)
+model data 405.83807373046875
+j 111
+data (32650, 426.72525, 2.5)
+model data 407.0773620605469
+j 112
+data (34504, -999.0, 2.5)
+model data 407.5640563964844
+j 113
+data (34505, -999.0, 2.5)
+model data 407.4410400390625
+j 114
+data (34506, -999.0, 2.5)
+model data 408.6074523925781
+j 115
+data (34507, -999.0, 2.5)
+model data 407.2760925292969
+j 116
+data (34508, -999.0, 2.5)
+model data 406.06134033203125
+j 117
+data (34509, -999.0, 2.5)
+model data 406.0785827636719
+j 118
+data (34510, -999.0, 2.5)
+model data 407.4802551269531
+j 119
+data (34690, -999.0, 2.5)
+model data 408.1049499511719
+j 120
+data (34691, -999.0, 2.5)
+model data 407.4638977050781
+j 121
+data (34692, -999.0, 2.5)
+model data 408.5138244628906
+j 122
+data (34693, -999.0, 2.5)
+model data 407.0891418457031
+j 123
+data (34694, -999.0, 2.5)
+model data 405.61346435546875
+j 124
+data (34695, -999.0, 2.5)
+model data 405.9031677246094
+j 125
+data (34696, -999.0, 2.5)
+model data 407.39215087890625
+j 126
+data (35341, 426.50293, 2.5)
+model data 426.6074523925781
+j 127
+data (35342, 422.2456, 2.5)
+model data 424.9787902832031
+j 128
+data (35343, 422.65915, 2.5)
+model data 422.6820068359375
+j 129
+data (35344, 418.93738, 2.5)
+model data 422.4544677734375
+j 130
+data (35345, 419.2094, 2.5)
+model data 422.28741455078125
+j 131
+data (35346, 419.9869, 2.5)
+model data 417.8819580078125
+j 132
+data (35347, 432.63507, 2.5)
+model data 424.2782897949219
+j 133
+data (40177, 436.22485, 2.5)
+model data 408.2506408691406
+j 134
+data (40178, 425.87125, 2.5)
+model data 407.4918518066406
+j 135
+data (40179, 430.6202, 2.5)
+model data 408.62060546875
+j 136
+data (40180, 418.86887, 2.5)
+model data 407.3327941894531
+j 137
+data (40181, 418.934, 2.5)
+model data 405.68096923828125
+j 138
+data (40182, 420.64523, 2.5)
+model data 405.81378173828125
+j 139
+data (40183, 461.18103, 2.5)
+model data 407.0019226074219
+j 140
+data (44083, 451.33615, 2.5)
+model data 428.3594055175781
+j 141
+data (44084, 434.0871, 2.5)
+model data 427.0821533203125
+j 142
+data (44085, 445.10156, 2.5)
+model data 425.3569641113281
+j 143
+data (44086, 426.14563, 2.5)
+model data 424.0366516113281
+j 144
+data (44087, 426.6446, 2.5)
+model data 423.96697998046875
+j 145
+data (44088, 425.82547, 2.5)
+model data 439.3210754394531
+j 146
+data (44089, 492.2231, 2.5)
+model data 425.8289794921875
+j 147
+data (44734, 442.9474, 2.5)
+model data 428.56256103515625
+j 148
+data (44735, 427.2802, 2.5)
+model data 427.53643798828125
+j 149
+data (44736, 431.433, 2.5)
+model data 426.0385437011719
+j 150
+data (44737, 421.23672, 2.5)
+model data 424.0622253417969
+j 151
+data (44738, 421.95963, 2.5)
+model data 424.0247802734375
+j 152
+data (44739, 421.8262, 2.5)
+model data 437.2056884765625
+j 153
+data (44740, 471.16205, 2.5)
+model data 425.9054870605469
+ [INFO   ] (2019-09-03 14:23:06) py-observationoperator_cosmo : Finished parallel extraction \m/
+ [INFO   ] (2019-09-03 14:23:22) py-observationoperator_cosmo : ObservationOperator finished successfully, output file written (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030800_2019031423.nc)
+ [INFO   ] (2019-09-03 14:23:22) py-observations_cosmo   : Successfully read data from model sample file (/scratch/snx3000/parsenov/real/output/20190301/samples_simulated.2019030800_2019031423.nc)
+ [DEBUG  ] (2019-09-03 14:23:22) py-observations_cosmo   : Added 154 simulated values to the Data list
+ [DEBUG  ] (2019-09-03 14:23:22) py-pipeline             : Added samples from the observation operator to the assimilated obs list in the statevector
+ [DEBUG  ] (2019-09-03 14:23:22) py-pipeline             : statevector now carries 308 samples
+ [INFO   ] (2019-09-03 14:23:22) py-pipeline             : 
+
+    ***************************************   starting invert    *************************************** 
+  
+ [INFO   ] (2019-09-03 14:23:22) py-pipeline             : There was no minimum least squares algorithm specified in the DA System rc file (key : opt.algorithm)
+ [INFO   ] (2019-09-03 14:23:22) py-pipeline             : ...using serial algorithm as default...
+ [INFO   ] (2019-09-03 14:23:22) py-optimizer            : Current minimum least squares algorithm is set to Serial
+ [DEBUG  ] (2019-09-03 14:23:22) py-base_optimizer       : Creating new diagnostics file for optimizer (/scratch/snx3000/parsenov/real/output/20190301/optimizer.20190301.nc)
+ [DEBUG  ] (2019-09-03 14:23:22) py-base_optimizer       : Diagnostics file closed
+ [INFO   ] (2019-09-03 14:23:22) py-optimizer            : Current localization option is set to None
+j 0
+data (1403, 414.83582, 2.5)
+model data 407.8337097167969
+j 1
+data (1404, 416.1985, 2.5)
+model data 409.4893798828125
+j 2
+data (1405, 416.2378, 2.5)
+model data 409.6976623535156
+j 3
+data (1406, 413.32306, 2.5)
+model data 408.53204345703125
+j 4
+data (1407, 415.65115, 2.5)
+model data 409.5030822753906
+j 5
+data (1408, 415.7279, 2.5)
+model data 405.49871826171875
+j 6
+data (1409, 415.6715, 2.5)
+model data 403.2320251464844
+j 7
+data (3914, 414.66733, 2.5)
+model data 407.9148864746094
+j 8
+data (3915, 415.88376, 2.5)
+model data 409.6718444824219
+j 9
+data (3916, 415.61563, 2.5)
+model data 409.6085205078125
+j 10
+data (3917, 412.13007, 2.5)
+model data 409.2460021972656
+j 11
+data (3918, 414.70825, 2.5)
+model data 409.6776428222656
+j 12
+data (3919, 415.8965, 2.5)
+model data 405.3327331542969
+j 13
+data (3920, 413.28586, 2.5)
+model data 403.3096618652344
+j 14
+data (4658, 415.76706, 1.5)
+model data 407.8802795410156
+j 15
+data (4659, 416.6961, 1.5)
+model data 409.5516662597656
+j 16
+data (4660, 417.1038, 1.5)
+model data 409.8055114746094
+j 17
+data (4661, 413.6227, 1.5)
+model data 408.7931823730469
+j 18
+data (4662, 416.13898, 1.5)
+model data 409.5313720703125
+j 19
+data (4663, 415.53757, 1.5)
+model data 405.408935546875
+j 20
+data (4664, 415.75156, 1.5)
+model data 403.2018127441406
+j 21
+data (7262, 417.01535, 2.5)
+model data 407.73541259765625
+j 22
+data (7263, 416.56445, 2.5)
+model data 409.5423278808594
+j 23
+data (7264, 415.75366, 2.5)
+model data 409.5458068847656
+j 24
+data (7265, 415.1103, 2.5)
+model data 408.6136169433594
+j 25
+data (7266, 417.2339, 2.5)
+model data 409.4132080078125
+j 26
+data (7267, 419.82904, 2.5)
+model data 405.3642883300781
+j 27
+data (7268, 415.63593, 2.5)
+model data 404.0382995605469
+j 28
+data (12284, 418.827, 1.5)
+model data 425.4004211425781
+j 29
+data (12285, 422.39905, 1.5)
+model data 428.80401611328125
+j 30
+data (12286, 418.55447, 1.5)
+model data 423.9975280761719
+j 31
+data (12287, 415.38293, 1.5)
+model data 423.48236083984375
+j 32
+data (12288, 420.80374, 1.5)
+model data 422.89031982421875
+j 33
+data (12289, 416.90994, 1.5)
+model data 423.7679443359375
+j 34
+data (12290, 417.92413, 1.5)
+model data 424.3676452636719
+j 35
+data (13772, 417.61133, 2.5)
+model data 407.8125305175781
+j 36
+data (13773, 419.92184, 2.5)
+model data 409.4495544433594
+j 37
+data (13774, 416.60156, 2.5)
+model data 409.6797180175781
+j 38
+data (13775, 416.65356, 2.5)
+model data 408.4096374511719
+j 39
+data (13776, 416.3116, 2.5)
+model data 409.45269775390625
+j 40
+data (13777, 420.29868, 2.5)
+model data 405.509521484375
+j 41
+data (13778, 416.3798, 2.5)
+model data 403.7472839355469
+j 42
+data (14981, 416.5042, 2.5)
+model data 407.7880554199219
+j 43
+data (14982, 419.41904, 2.5)
+model data 409.53179931640625
+j 44
+data (14983, 415.8266, 2.5)
+model data 409.70831298828125
+j 45
+data (14984, 416.88742, 2.5)
+model data 408.7327575683594
+j 46
+data (14985, 416.40436, 2.5)
+model data 409.4469299316406
+j 47
+data (14986, 422.018, 2.5)
+model data 405.38519287109375
+j 48
+data (14987, 415.25952, 2.5)
+model data 403.599609375
+j 49
+data (15725, 416.7148, 1.5)
+model data 407.92181396484375
+j 50
+data (15726, 418.51288, 1.5)
+model data 409.68292236328125
+j 51
+data (15727, 416.20673, 1.5)
+model data 409.584228515625
+j 52
+data (15728, 417.06006, 1.5)
+model data 409.274658203125
+j 53
+data (15729, 416.22906, 1.5)
+model data 409.7274475097656
+j 54
+data (15730, 421.51547, 1.5)
+model data 405.26397705078125
+j 55
+data (15731, 415.53214, 1.5)
+model data 403.49346923828125
+j 56
+data (18143, 420.0324, 1.5)
+model data 424.7762145996094
+j 57
+data (18144, 426.89304, 1.5)
+model data 424.0772399902344
+j 58
+data (18145, 415.98294, 1.5)
+model data 423.3990783691406
+j 59
+data (18146, 413.62552, 1.5)
+model data 422.2132263183594
+j 60
+data (18147, 419.37244, 1.5)
+model data 425.0567626953125
+j 61
+data (18148, 431.5262, 1.5)
+model data 422.1515197753906
+j 62
+data (18149, 420.9054, 1.5)
+model data 424.1409606933594
+j 63
+data (21863, 416.92596, 1.5)
+model data 407.80828857421875
+j 64
+data (21864, 420.68134, 1.5)
+model data 409.48248291015625
+j 65
+data (21865, 416.7495, 1.5)
+model data 409.6813049316406
+j 66
+data (21866, 417.1643, 1.5)
+model data 408.4654541015625
+j 67
+data (21867, 416.63684, 1.5)
+model data 409.45391845703125
+j 68
+data (21868, 418.27496, 1.5)
+model data 405.4830017089844
+j 69
+data (21869, 417.06522, 1.5)
+model data 403.688232421875
+j 70
+data (23723, 427.7023, 2.5)
+model data 422.0548400878906
+j 71
+data (23724, 432.31335, 2.5)
+model data 421.51995849609375
+j 72
+data (23725, 427.68643, 2.5)
+model data 422.1593017578125
+j 73
+data (23726, 423.72787, 2.5)
+model data 420.72705078125
+j 74
+data (23727, 413.7132, 2.5)
+model data 420.6000061035156
+j 75
+data (23728, 418.06046, 2.5)
+model data 419.5971374511719
+j 76
+data (23729, 424.2745, 2.5)
+model data 420.6895751953125
+j 77
+data (28838, 416.23233, 1.5)
+model data 423.20526123046875
+j 78
+data (28839, 418.68198, 1.5)
+model data 423.6026306152344
+j 79
+data (28840, 417.41223, 1.5)
+model data 422.3307800292969
+j 80
+data (28841, 415.60162, 1.5)
+model data 421.1830749511719
+j 81
+data (28842, 416.22775, 1.5)
+model data 421.84619140625
+j 82
+data (28843, 420.7688, 1.5)
+model data 421.1493225097656
+j 83
+data (28844, 415.68677, 1.5)
+model data 422.4568176269531
+j 84
+data (30419, 419.735, 2.5)
+model data 425.4580078125
+j 85
+data (30420, 421.76324, 2.5)
+model data 427.3305969238281
+j 86
+data (30421, 418.76984, 2.5)
+model data 424.01904296875
+j 87
+data (30422, 416.96585, 2.5)
+model data 423.5729675292969
+j 88
+data (30423, 419.3849, 2.5)
+model data 426.56134033203125
+j 89
+data (30424, 421.6482, 2.5)
+model data 423.24346923828125
+j 90
+data (30425, 418.22543, 2.5)
+model data 424.4967346191406
+j 91
+data (30977, 415.0719, 1.5)
+model data 407.9134216308594
+j 92
+data (30978, 418.0693, 1.5)
+model data 409.5032958984375
+j 93
+data (30979, 415.56253, 1.5)
+model data 409.7022705078125
+j 94
+data (30980, 412.4842, 1.5)
+model data 408.78570556640625
+j 95
+data (30981, 416.43668, 1.5)
+model data 409.5545959472656
+j 96
+data (30982, 415.66605, 1.5)
+model data 405.4742431640625
+j 97
+data (30983, 415.2633, 1.5)
+model data 402.93829345703125
+j 98
+data (32093, 419.53082, 2.5)
+model data 407.80279541015625
+j 99
+data (32094, 427.15643, 2.5)
+model data 409.7540283203125
+j 100
+data (32095, 427.59485, 2.5)
+model data 409.4540100097656
+j 101
+data (32096, 425.67017, 2.5)
+model data 409.61407470703125
+j 102
+data (32097, 417.11688, 2.5)
+model data 409.9284362792969
+j 103
+data (32098, 423.38535, 2.5)
+model data 405.65875244140625
+j 104
+data (32099, 417.5375, 2.5)
+model data 403.4378356933594
+j 105
+data (32651, 412.8523, 2.5)
+model data 407.8941345214844
+j 106
+data (32652, 413.7961, 2.5)
+model data 409.5635681152344
+j 107
+data (32653, 412.2474, 2.5)
+model data 409.8008117675781
+j 108
+data (32654, 408.99005, 2.5)
+model data 408.8603210449219
+j 109
+data (32655, 413.65656, 2.5)
+model data 409.5533752441406
+j 110
+data (32656, 415.23495, 2.5)
+model data 405.40948486328125
+j 111
+data (32657, 412.29245, 2.5)
+model data 403.1077575683594
+j 112
+data (34511, -999.0, 2.5)
+model data 407.85858154296875
+j 113
+data (34512, -999.0, 2.5)
+model data 409.57281494140625
+j 114
+data (34513, -999.0, 2.5)
+model data 409.9084777832031
+j 115
+data (34514, -999.0, 2.5)
+model data 409.8998107910156
+j 116
+data (34515, -999.0, 2.5)
+model data 409.63665771484375
+j 117
+data (34516, -999.0, 2.5)
+model data 406.4831848144531
+j 118
+data (34517, -999.0, 2.5)
+model data 403.9228210449219
+j 119
+data (34697, -999.0, 2.5)
+model data 407.817626953125
+j 120
+data (34698, -999.0, 2.5)
+model data 409.7187194824219
+j 121
+data (34699, -999.0, 2.5)
+model data 409.6271667480469
+j 122
+data (34700, -999.0, 2.5)
+model data 409.6431579589844
+j 123
+data (34701, -999.0, 2.5)
+model data 410.0072021484375
+j 124
+data (34702, -999.0, 2.5)
+model data 405.43109130859375
+j 125
+data (34703, -999.0, 2.5)
+model data 403.3642883300781
+j 126
+data (35348, 418.7555, 2.5)
+model data 423.3351135253906
+j 127
+data (35349, 420.599, 2.5)
+model data 423.9113464355469
+j 128
+data (35350, 418.5732, 2.5)
+model data 423.27545166015625
+j 129
+data (35351, 417.69272, 2.5)
+model data 422.1769714355469
+j 130
+data (35352, 418.699, 2.5)
+model data 419.75518798828125
+j 131
+data (35353, 416.7409, 2.5)
+model data 421.9947509765625
+j 132
+data (35354, 417.8635, 2.5)
+model data 422.71624755859375
+j 133
+data (40184, 420.13065, 2.5)
+model data 407.8196716308594
+j 134
+data (40185, 426.45923, 2.5)
+model data 409.4749755859375
+j 135
+data (40186, 418.1817, 2.5)
+model data 409.6996765136719
+j 136
+data (40187, 415.41565, 2.5)
+model data 408.4697570800781
+j 137
+data (40188, 421.9362, 2.5)
+model data 409.4879455566406
+j 138
+data (40189, 420.1164, 2.5)
+model data 405.5147705078125
+j 139
+data (40190, 419.75153, 2.5)
+model data 403.3864440917969
+j 140
+data (44090, 427.97708, 2.5)
+model data 426.0093688964844
+j 141
+data (44091, 433.4337, 2.5)
+model data 431.6092834472656
+j 142
+data (44092, 427.97293, 2.5)
+model data 423.8194580078125
+j 143
+data (44093, 420.8817, 2.5)
+model data 424.02447509765625
+j 144
+data (44094, 435.0935, 2.5)
+model data 426.19427490234375
+j 145
+data (44095, 430.62527, 2.5)
+model data 423.31793212890625
+j 146
+data (44096, 426.11234, 2.5)
+model data 424.4242248535156
+j 147
+data (44741, 422.1897, 2.5)
+model data 426.2695617675781
+j 148
+data (44742, 424.02405, 2.5)
+model data 431.548095703125
+j 149
+data (44743, 422.19495, 2.5)
+model data 423.8769836425781
+j 150
+data (44744, 418.04297, 2.5)
+model data 424.132568359375
+j 151
+data (44745, 428.11337, 2.5)
+model data 426.6828308105469
+j 152
+data (44746, 421.04163, 2.5)
+model data 423.5563049316406
+j 153
+data (44747, 421.82227, 2.5)
+model data 424.49810791015625
+Traceback (most recent call last):
+  File "cosmo.py", line 71, in <module>
+    ensemble_smoother_pipeline(dacycle, platform, dasystem, samples, statevector, obsoperator, optimizer)
+  File "/store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/cosmo/pipeline.py", line 45, in ensemble_smoother_pipeline
+    invert(dacycle, statevector, optimizer)
+  File "/store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/cosmo/pipeline.py", line 403, in invert
+    optimizer.serial_minimum_least_squares()
+  File "/store/empa/em05/parsenov/CTDAS/ctdas-cosmo/da/cosmo/base_optimizer.py", line 340, in serial_minimum_least_squares
+    logging.debug('Rejecting observation (%s,%i) because residual (%f) exceeds threshold (%f)' % (self.sitecode[n], self.obs_ids[n], res, threshold))
+NameError: name 'bias' is not defined

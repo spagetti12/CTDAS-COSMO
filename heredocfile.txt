@@ -1,0 +1,4 @@
+    where <projectdir> is a base folder for the project
+    and <projectname> is a name to use for the project.
+
+    !! A folder projectdir/projectname will be created !!
